@@ -1,0 +1,41 @@
+.menuPrincipal{
+    
+}
+
+.topo{
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+}
+
+
+.tituloSite{
+    background-color: red;
+    text-align: center;
+}
+
+.buscadorItens{
+    background-color: green;
+    text-align: center;
+}
+
+.botaoIniciarSessao{
+    background-color: blue;
+    text-align: center;
+}
+
+.banner{
+    text-align: center;
+}
+
+.galeriaDeProdutos{
+    text-align: center;
+}
+
+.formularioDeContato{
+    text-align: center;
+}
+
+.rodape{
+    text-align: center;
+}
