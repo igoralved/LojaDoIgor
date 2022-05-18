@@ -7,33 +7,94 @@
     </head>
     <body>
         <main>
-            <p class="menuPrincipal">
-                <div class="topo">
-                    <div class="tituloSite">
-                        <img src="./img/Logo.png">
-                    </div>
-                    <div class="buscadorItens">
-                            BuscadorItens
-                    </div>
-                    <div class="botaoIniciarSessao">
-                        Login
-                    </div>
+
+            <div class="cabecalho">
+                <div>
+                <img src="./img/Logo.png" class="tituloSite">
+            </div>
+                <div class="buscadorItens">
+                    <form action="#">
+                        <input type="text" placeholder="O que deseja encontrar?" name="search">
+                        <button type="submit" class="botaoBuscar">Buscar</button>
+                    </form>
                 </div>
-                <div class="banner">
-                    Banner
+                <div class="botaoIniciarSessao">
+                    <button type="submit" class="botaoLogin">Login</button>
                 </div>
+            </div>
+
+            <section class="menuPrincipal">
+                <section class="banner">
+                    <img src="./img/banner-image.png" class="imagemBanner">
+                    <h1 class="promocao">Dezembro Promocional</h1>
+                    <h2 class="selecao">Produtos selecionados com 33% de desconto</h2>
+                    <button type="submit" class="botaoVerConsoles">Ver concoles</button>
+                </section>
 
                 <div class="galeriaDeProdutos">
-                    Galeria de produtos
+                    <section class="starWars">
+                        <h1 class="nomeStarWars">
+                            Star Wars
+                        </h1>
+                        <ul class="produtosStarWars">
+                            <li class="produtoStarWars">
+                                <a>
+                                    <img src="./img/produtoStarWars1.png" alt="Produto XYZ">
+                                </a>
+                                <a>
+                                    Produto XYZ
+                                </a>
+                                <a>
+                                    R$60,00
+                                </a>
+                                <a href="#">Ver produto</a>
+                            </li>
+                        </ul>
+                    </section>
                 </div>
 
                 <div class="formularioDeContato">
-                    Formulário de contato
+                    <div><img src="./img/Logo.png" class="tituloSite"></div>
+                    <div class="navList">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Quem somos nós
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Política de privacidade
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Programa de fidelidade
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Nossas lojas
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Quero ser franqueado
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Anuncie aqui
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>Fale conosco</div>
                 </div>
-            </p>
+            </section>
         </main>
         <footer class="rodape">
-            Rodapé
+            Desenvolvido por Igor Alves
         </footer>
     </body>
 </html>

@@ -1,8 +1,8 @@
 .menuPrincipal{
-    
+    margin-top: 10px;
 }
 
-.topo{
+.cabecalho{
     display: flex;
     justify-content:space-between;
     width: 100%;
@@ -17,20 +17,93 @@
     text-align: center;
 }
 
+.botaoBuscar{
+    border-color: blue;
+    color: blue;
+}
+
 .botaoIniciarSessao{
     text-align: center;
 }
 
+.botaoLogin{
+    width: 200px;
+    height: 50px;
+    border-color: blue;
+    color: blue;
+}
+
 .banner{
-    text-align: center;
+    width: 100%;
+    margin:auto;
+    position: relative;
+}
+
+.imagemBanner{
+    width: 100%;
+}
+
+.promocao{
+    color:white;
+    font-size: 40px;
+    bottom: 90;
+    left: 10;
+    position: absolute;
+}
+
+.selecao{
+    color:white;
+    font-size: 20px;
+    bottom: 50;
+    left:10;
+    position: absolute;
+}
+
+.botaoVerConsoles{
+    width: 20%;
+    height: 10%;
+    background-color: blue;
+    color:white;
+    bottom: 10;
+    left: 10;
+    position: absolute;
 }
 
 .galeriaDeProdutos{
     text-align: center;
 }
 
+.starWars{
+    text-align: left;
+    justify-content: left;
+}
+
+.nomeStarWars{
+    text-align:center;
+    font-size:50px;
+}
+
+.produtosStarWars {
+    align-items: center;
+    display:flex;
+    justify-content: space-around;
+}
+
+.produtoStarWars{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    flex-grow: 15px;
+}
+
 .formularioDeContato{
-    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content:space-around;
+}
+
+.navList{
+    
 }
 
 .rodape{
