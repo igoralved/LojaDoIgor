@@ -73,12 +73,12 @@
     text-align: center;
 }
 
-.starWars{
+.categoriaProdutos{
     text-align: center;
     justify-content: left;
 }
 
-.nomeStarWars{
+.nomeCategoriaProdutos{
     font-size:50px;
 }
 
