@@ -23,6 +23,11 @@
     color: blue;
 }
 
+.botaoBuscar:hover{
+    color:violet;
+    cursor:pointer;
+}
+
 .botaoIniciarSessao{
     text-align: center;
 }
@@ -32,6 +37,11 @@
     height: 25px;
     border-color: blue;
     color: blue;
+}
+
+.botaoLogin:hover{
+    color: violet;
+    cursor:pointer;
 }
 
 .banner{
@@ -67,6 +77,11 @@
     top: 160px;
     left: 10px;
     position: absolute;
+}
+
+.botaoVerConsoles:hover{
+    color: violet;
+    cursor:pointer;
 }
 
 .galeriaDeProdutos{
