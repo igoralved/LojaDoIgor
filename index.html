@@ -1,29 +1,30 @@
-<!DOCKTYPE html>
+<!doctype html>
 <html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>AluraGeek</title>
         <link rel="stylesheet" href="./css/elementosPrincipais.css">
     </head>
     <body>
-        <main>
 
-            <div class="cabecalho">
-                <div>
+        <header class="cabecalho">
+            <div>
                 <img src="./img/Logo.png" class="tituloSite">
             </div>
-                <div class="buscadorItens">
-                    <form action="#">
-                        <input type="text" placeholder="O que deseja encontrar?" name="search">
-                        <button type="submit" class="botaoBuscar">Buscar</button>
-                    </form>
-                </div>
-                <div class="botaoIniciarSessao">
-                    <button type="submit" class="botaoLogin">Login</button>
-                </div>
+            <div class="buscadorItens">
+                <form action="#">
+                    <input type="text" placeholder="O que deseja encontrar?" name="search">
+                    <button type="submit" class="botaoBuscar">Buscar</button>
+                </form>
             </div>
+            <div class="botaoIniciarSessao">
+                <button type="submit" class="botaoLogin">Login</button>
+            </div>
+        </header>
 
-            <section class="menuPrincipal">
+        <main class="menuPrincipal">
+            <section>
                 <section class="banner">
                     <img src="./img/banner-image.png" class="imagemBanner">
                     <h1 class="promocao">Dezembro Promocional</h1>
@@ -277,8 +278,8 @@
 
             <div class="formularioDeContato">
                 <div><img src="./img/Logo.png" class="tituloSite"></div>
-                <div class="navList">
-                    <ul>
+                <nav>
+                    <ul class="navList">
                         <li class="iconeNavList">
                             <a href="#">
                                 Quem somos nós
@@ -310,7 +311,7 @@
                             </a>
                         </li>
                     </ul>
-                </div>
+                </nav>
                 <div class="faleConosco">
                     <h2>Fale conosco</h2>
                     <form class="formularioFaleConosco">

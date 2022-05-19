@@ -1,11 +1,13 @@
-.menuPrincipal{
-    margin-top: 10px;
-}
 
 .cabecalho{
     display: flex;
     justify-content:space-between;
     width: 100%;
+    background-color: limegreen;
+}
+
+.menuPrincipal{
+    margin-top: 10px;
 }
 
 
@@ -35,7 +37,6 @@
 
 .banner{
     position: relative;
-    
 }
 
 .imagemBanner{
