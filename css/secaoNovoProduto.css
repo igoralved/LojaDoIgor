@@ -1,0 +1,40 @@
+
+.menuAdicionarNovoProduto{
+    text-align: center;
+}
+
+.adicionarImagemProduto{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+}
+
+.botaoDragAndDrop{
+    width: 10vw;
+    height: 10vh;
+}
+
+.procurarNoComputador{
+    color:white;
+    background-color: blue;
+}
+
+.procurarNoComputador:hover{
+    color:violet;
+    cursor: pointer;
+}
+
+.nomeCampo{
+    font-size: 20px;
+}
+
+.botaoAdicionar{
+    color:white;
+    background-color: blue;
+}
+
+.botaoAdicionar:hover{
+    color:violet;
+    cursor: pointer;
+}
