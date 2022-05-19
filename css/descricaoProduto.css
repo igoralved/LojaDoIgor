@@ -1,0 +1,29 @@
+.descricaoProduto{
+    display: flex;
+    flex-direction:row;
+}
+
+.informacoesProduto{
+    display: flex;
+    flex-direction: column;
+}
+
+.fotoProduto{
+    width:auto;
+    height: auto;
+}
+
+.nome{
+    font-size: 20px;
+}
+
+.preco{
+    font-size: 10px;
+    font-style:normal;
+}
+
+.descricaoProduto{
+    font-size: 10px;
+    font-style: normal;
+
+}
