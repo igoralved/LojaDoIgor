@@ -15,15 +15,16 @@
 
 .nome{
     font-size: 20px;
+    color:black;
 }
 
 .preco{
     font-size: 10px;
-    font-style:normal;
+    color:black;
 }
 
 .descricaoProduto{
     font-size: 10px;
-    font-style: normal;
+    color:gray;
 
 }
