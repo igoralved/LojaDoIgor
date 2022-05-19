@@ -1,0 +1,25 @@
+
+.menuLogin{
+    text-align: center;
+}
+
+.iniciarSessaoTitulo{
+
+}
+
+.emailInput{
+
+}
+.senhaInput{
+
+}
+
+.loginButton{
+    background-color: blue;
+    color: white;
+}
+
+.loginButton:hover{
+    color: violet;
+    cursor:pointer;
+}

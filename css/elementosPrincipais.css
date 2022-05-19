@@ -143,6 +143,11 @@
 
 }
 
+.botaoFalarConosco:hover{
+    color:violet;
+    cursor:pointer;
+}
+
 .rodape{
     text-align: center;
 }
