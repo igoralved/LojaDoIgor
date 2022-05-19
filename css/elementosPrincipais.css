@@ -34,13 +34,12 @@
 }
 
 .banner{
-    width: 100%;
-    margin:auto;
     position: relative;
+    
 }
 
 .imagemBanner{
-    width: 100%;
+    width:100%
 }
 
 .promocao{
@@ -70,20 +69,24 @@
 }
 
 .galeriaDeProdutos{
-    text-align: center;
+    
 }
 
 .categoriaProdutos{
-    text-align: center;
-    justify-content: left;
+    width:100%;
+    display: flex;
+    flex-direction:column;
+    position: relative;
+    justify-content: space-between;
 }
 
 .nomeCategoriaProdutos{
     font-size:50px;
+    justify-content: center;
+    text-align: center;
 }
 
 .produtos {
-    align-items: center;
     display:flex;
     flex-direction: row;
     justify-content:center;
@@ -97,11 +100,12 @@
 }
 
 .imagemProduto{
-    width: 170;
-    height: 170;
+    width: 10vw;
+    height: 20vh;
 }
 
 .formularioDeContato{
+    background-color: cyan;
     align-items: center;
     display: flex;
     justify-content:space-around;
@@ -116,9 +120,21 @@
 }
 
 .formularioFaleConosco{
-    
+
+}
+
+.botaoFalarConosco{
+
 }
 
 .rodape{
     text-align: center;
+}
+
+.iconeNavList{
+    font-style:normal;
+}
+
+.desenvolvedor{
+    font-size: 20
 }
