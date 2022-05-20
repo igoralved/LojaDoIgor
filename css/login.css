@@ -1,49 +1,4 @@
 
-.cabecalho{
-    display: flex;
-    justify-content:space-around;
-    align-items:center;
-    background-color: limegreen;
-}
-
-.menuPrincipal{
-    margin-top: 10px;
-}
-
-
-.tituloSite{
-    text-align: center;
-}
-
-.buscadorItens{
-    text-align: center;
-}
-
-.botaoBuscar{
-    border-color: blue;
-    color: blue;
-}
-
-.botaoBuscar:hover{
-    color:violet;
-    cursor:pointer;
-}
-
-.botaoIniciarSessao{
-    text-align: center;
-}
-
-.botaoLogin{
-    width: 100px;
-    height: 25px;
-    border-color: blue;
-    color: blue;
-}
-
-.botaoLogin:hover{
-    color: violet;
-    cursor:pointer;
-}
 
 .menuLogin{
     text-align: center;
