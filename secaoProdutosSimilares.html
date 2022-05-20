@@ -6,7 +6,19 @@
         <link rel="stylesheet" href="./css/secaoProdutosSimilares.css">
     </head>
     <body>
-        <header>
+        <header class="cabecalho">
+            <div class="tituloSite">
+                <img src="./img/Logo.png">
+            </div>
+            <div class="buscadorItens">
+                <form action="#">
+                    <input type="text" placeholder="O que deseja encontrar?" name="search">
+                    <button type="submit" class="botaoBuscar">Buscar</button>
+                </form>
+            </div>
+            <div class="botaoIniciarSessao">
+                <button type="submit" class="botaoLogin">Login</button>
+            </div>
         </header>
         <main>
             <div class="nomeCategoriaProdutos">
@@ -89,8 +101,59 @@
                 </ul>
             </section>
         </main>
-        <footer>
+        <footer class="rodape">
+            <div class="formularioDeContato">
+                <div><img src="./img/Logo.png" class="tituloSite"></div>
+                <nav>
+                    <ul class="navList">
+                        <li class="iconeNavList">
+                            <a href="#">
+                                Quem somos nós
+                            </a>
+                        </li>
+                        <li class="iconeNavList">
+                            <a href="#">
+                                Política de privacidade
+                            </a>
+                        </li>
+                        <li class="iconeNavList">
+                            <a href="#">
+                                Programa de fidelidade
+                            </a>
+                        </li>
+                        <li class="iconeNavList">
+                            <a href="#">
+                                Nossas lojas
+                            </a>
+                        </li>
+                        <li class="iconeNavList">
+                            <a href="#">
+                                Quero ser franqueado
+                            </a>
+                        </li>
+                        <li class="iconeNavList">
+                            <a href="#">
+                                Anuncie aqui
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="faleConosco">
+                    <h2>Fale conosco</h2>
+                    <form class="formularioFaleConosco">
+                        <h2>Nome</h2>
+                        <input type="text" name="search">
+                        <h2>Mensagem</h2>
+                        <input type="text" name="search">
+                        <h2>
+                            <button type="submit" class="botaoFalarConosco">Enviar mensagem</button>
+                        </h2>
+                    </form>
+                </div>
+            </div>
 
+            <div class="desenvolvedor">Desenvolvido por Igor Alves</div>
+            <div class="desenvolvedor">2022</div>
         </footer>
     </body>
 </html>

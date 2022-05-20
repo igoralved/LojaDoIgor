@@ -1,3 +1,50 @@
+
+.cabecalho{
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    background-color: limegreen;
+}
+
+.menuPrincipal{
+    margin-top: 10px;
+}
+
+
+.tituloSite{
+    text-align: center;
+}
+
+.buscadorItens{
+    text-align: center;
+}
+
+.botaoBuscar{
+    border-color: blue;
+    color: blue;
+}
+
+.botaoBuscar:hover{
+    color:violet;
+    cursor:pointer;
+}
+
+.botaoIniciarSessao{
+    text-align: center;
+}
+
+.botaoLogin{
+    width: 100px;
+    height: 25px;
+    border-color: blue;
+    color: blue;
+}
+
+.botaoLogin:hover{
+    color: violet;
+    cursor:pointer;
+}
+
 .categoriaProdutos{
     width:100%;
     display: flex;
@@ -28,4 +75,44 @@
 .imagemProduto{
     width: 10vw;
     height: 20vh;
+}
+
+.formularioDeContato{
+    background-color: cyan;
+    align-items: center;
+    display: flex;
+    justify-content:space-around;
+}
+
+.navList{
+    
+}
+
+.faleConosco{
+    text-align: left;
+}
+
+.formularioFaleConosco{
+
+}
+
+.botaoFalarConosco{
+
+}
+
+.botaoFalarConosco:hover{
+    color:violet;
+    cursor:pointer;
+}
+
+.rodape{
+    text-align: center;
+}
+
+.iconeNavList{
+    font-style:normal;
+}
+
+.desenvolvedor{
+    font-size: 20
 }
