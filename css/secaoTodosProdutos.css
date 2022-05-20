@@ -63,12 +63,16 @@
 
 .tituloTodosProdutos{
     font-size: 20px;
-    
 }
 
 .botaoAdicionarProduto{
     color: white;
     background-color: blue;
+}
+
+.botaoAdicionarProduto:hover{
+    color:violet;
+    cursor: pointer;
 }
 
 .produtos {
