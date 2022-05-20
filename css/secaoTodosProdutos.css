@@ -53,10 +53,21 @@
     justify-content: space-between;
 }
 
-.nomeCategoriaProdutos{
+.nomeCategoriaProdutosEBotaoAdicionar{
     font-size:50px;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.tituloTodosProdutos{
+    font-size: 20px;
+}
+
+.botaoAdicionarProduto{
+    color: white;
+    background-color: blue;
 }
 
 .produtos {
