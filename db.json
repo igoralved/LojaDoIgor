@@ -1,0 +1,76 @@
+{
+    "profile": [
+        {
+            "nome": "Boneco Star Wars 1",
+            "preco": 20.00,
+            "descricao": "Recomendado",
+            "imagem": ".././img/produtoStarWars1.png",
+            "categoria":"Star Wars",
+            "id":1
+        },
+        {
+            "nome": "Boneco Star Wars 2",
+            "preco": 25.00,
+            "descricao": "Recomendado",
+            "imagem": ".././img/produtoStarWars2.png",
+            "categoria":"Star Wars",
+            "id":2
+        },
+        {
+            "nome": "Boneco Star Wars 3",
+            "preco": 20.00,
+            "descricao": "Recomendado",
+            "imagem": ".././img/produtoStarWars3.png",
+            "categoria":"Star Wars",
+            "id":3
+        },
+        {
+            "nome": "Boneco Star Wars 4",
+            "preco": 25.00,
+            "descricao": "Recomendado",
+            "imagem": ".././img/produtoStarWars4.png",
+            "categoria":"Star Wars",
+            "id":4
+        },
+        {
+            "nome": "Boneco Star Wars 5",
+            "preco": 20.00,
+            "descricao": "Recomendado",
+            "imagem": ".././img/produtoStarWars5.png",
+            "categoria":"Star Wars",
+            "id":5
+        },
+        {
+            "nome": "Boneco Star Wars 6",
+            "preco": 25.00,
+            "descricao": "Recomendado",
+            "imagem": ".././img/produtoStarWars6.png",
+            "categoria":"Star Wars",
+            "id":6
+        },
+        {
+            "nome": "Boneco Star Wars 7",
+            "preco": 25.00,
+            "descricao": "Proibido",
+            "imagem": ".././img/produtoStarWars6.png",
+            "categoria":"Star Wars",
+            "id":11
+        },{
+            "nome": "Console 1",
+            "preco": 25.00,
+            "descricao": "Recomendado",
+            "imagem": ".././img/console1.png",
+            "categoria":"Console",
+            "id":6
+        }
+        ,
+        {
+            "nome": "Diverso 6",
+            "preco": 25.00,
+            "descricao": "Recomendado",
+            "imagem": ".././img/produtoStarWars1.png",
+            "categoria":"Diverso",
+            "id":6
+        }
+    ]
+}

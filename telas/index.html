@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>AluraGeek</title>
+        <link rel="stylesheet" href=".././css/elementosPrincipais.css">
+        <link rel="stylesheet" href=".././css/cabecalho.css">
+        <link rel="stylesheet" href=".././css/rodape.css">
+    </head>
+    <body>
+
+        <header class="cabecalho">
+            <div class="tituloSite">
+                <img src=".././img/Logo.png">
+            </div>
+            <div class="buscadorItens">
+                <form action="#">
+                    <input type="text" placeholder="O que deseja encontrar?" name="search">
+                    <button type="submit" class="botaoBuscar">Buscar</button>
+                </form>
+            </div>
+            <div class="botaoIniciarSessao">
+                <button type="submit" class="botaoLogin">Login</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="menuPrincipal">
+                <section class="banner">
+                    <img src=".././img/banner-image.png" class="imagemBanner">
+                    <h1 class="promocao">Dezembro Promocional</h1>
+                    <h2 class="selecao">Produtos selecionados com 33% de desconto</h2>
+                    <button type="submit" class="botaoVerConsoles">
+                        <a href="#idConsoles">
+                            Ver concoles
+                        </a>
+                    </button>
+                </section>
+
+                <div class="galeriaDeProdutos">
+                    
+                    <table class="categoriaProdutos">
+                        <div class="topoCategoria">
+                            <div class="nomeCategoriaProdutos">Star Wars</div>
+                            <button class="iconeVerTudo">Ver tudo</button>
+                        </div>
+                    <tbody data-tabela1 class="tabela">
+
+                    </tbody>
+                    </table>
+
+                    <table class="categoriaProdutos">
+                        <div class="topoCategoria">
+                            <div class="nomeCategoriaProdutos">Consoles</div>
+                            <button class="iconeVerTudo">Ver tudo</button>
+                        </div>
+                    <tbody data-tabela2 class="tabela">
+
+                    </tbody>
+                    </table>
+
+                    <table class="categoriaProdutos">
+                        <div class="topoCategoria">
+                            <div class="nomeCategoriaProdutos">Diversos</div>
+                            <button class="iconeVerTudo">Ver tudo</button>
+                        </div>
+                    <tbody data-tabela3 class="tabela">
+
+                    </tbody>
+                    </table>           
+                
+                           
+                </div>
+
+            </section>
+        </main>
+        <footer class="rodape">
+
+            <div class="formularioDeContato">
+                <div><img src=".././img/Logo.png" class="tituloSite"></div>
+                <nav>
+                    <ul class="navList">
+                        <li class="iconeNavList">
+                            <a href="#">
+                                Quem somos nós
+                            </a>
+                        </li>
+                        <li class="iconeNavList">
+                            <a href="#">
+                                Política de privacidade
+                            </a>
+                        </li>
+                        <li class="iconeNavList">
+                            <a href="#">
+                                Programa de fidelidade
+                            </a>
+                        </li>
+                        <li class="iconeNavList">
+                            <a href="#">
+                                Nossas lojas
+                            </a>
+                        </li>
+                        <li class="iconeNavList">
+                            <a href="#">
+                                Quero ser franqueado
+                            </a>
+                        </li>
+                        <li class="iconeNavList">
+                            <a href="#">
+                                Anuncie aqui
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="faleConosco">
+                    <h2>Fale conosco</h2>
+                    <form class="formularioFaleConosco">
+                        <h2>Nome</h2>
+                        <input type="text" name="search">
+                        <h2>Mensagem</h2>
+                        <input type="text" name="search">
+                        <h2>
+                            <button type="submit" class="botaoFalarConosco">Enviar mensagem</button>
+                        </h2>
+                    </form>
+                </div>
+            </div>
+
+            <div class="desenvolvedor">Desenvolvido por Igor Alves</div>
+            <div class="desenvolvedor">2022</div>
+        </footer>
+        <script src=".././js/service/produtoService.js"></script>
+    </body>
+</html>

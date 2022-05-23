@@ -1,0 +1,22 @@
+{
+  "name": "lojadoigor",
+  "version": "1.0.0",
+  "description": "É uma loja do igor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igoralved/LojaDoIgor.git"
+  },
+  "author": "igor",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.16.2"    
+  },
+  "bugs": {
+    "url": "https://github.com/igoralved/LojaDoIgor/issues"
+  },
+  "homepage": "https://github.com/igoralved/LojaDoIgor#readme"
+}

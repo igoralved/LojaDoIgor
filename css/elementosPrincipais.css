@@ -28,8 +28,9 @@
 .botaoVerConsoles{
     width:20%;
     height:20%;
-    background-color: blue;
-    color:white;
+    background-color: cyan;
+    font-size:20px;
+    color:red;
     top: 160px;
     left: 10px;
     position: absolute;
@@ -41,8 +42,16 @@
 }
 
 .galeriaDeProdutos{
-    
+
 }
+
+.tabela{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
 
 .categoriaProdutos{
     width:100%;
@@ -73,7 +82,19 @@
     color:violet;
 }
 
-.produtos {
+.produtosStarWars {
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+.produtosDiversos {
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+.produtosConsoles {
     display:flex;
     flex-direction: row;
     justify-content:center;
