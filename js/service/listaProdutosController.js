@@ -50,11 +50,6 @@ const criaNovaLinha = (nome, preco,descricao,imagem,categoria,id) => {
 }
 
 
-function atribuirDados(data){
-    
-    return data;
-}
-
 function aux(){
 
     var itens1 = Array.from(document.getElementsByClassName('produtosStarWars'));
@@ -141,54 +136,168 @@ function aux(){
         });
     }
     
-    
+}
+
+function recarregarPagina(){
+
+    window.location.href = "./index.html";    
+
+}
+
+function buscarProdutos(){
+    const b = document.querySelector("#textoBuscar");
+    const valorTexto = b.value;
+    localStorage.setItem('filtro',valorTexto);
+    recarregarPagina();
+    /*
+    if(valorTexto.length == 0){
+        if(lista === null){
+            lista =
+        produtoService.listaProdutos().then(
+            data =>
+            {
+                    let totalStarWars = 0;
+                    let totalConsoles = 0;
+                    let totalDiversos = 0;
+                    let ids1 = [];
+                    let ids2 = [];
+                    let ids3 = [];
+        
+                    data.forEach(elemento => {
+                        if(elemento.categoria === "Star Wars"){
+                            if(totalStarWars < 6 && procuraId(ids1,elemento.id) == false){
+                                tabela1.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
+                                elemento.categoria,elemento.id));
+                                ids1.push(elemento.id);
+                                totalStarWars++;
+                            }
+                        }else if(elemento.categoria === "Console"){
+                            if(totalConsoles < 6 && procuraId(ids2,elemento.id) == false){
+                                tabela2.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
+                                elemento.categoria,elemento.id));
+                                ids2.push(elemento.id);
+                                totalConsoles++;
+                            }
+                        }else if(elemento.categoria === "Diverso"){
+                            if(totalDiversos < 6 && procuraId(ids3,elemento.id) == false){
+                                tabela3.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
+                                elemento.categoria,elemento.id));
+                                ids3.push(elemento.id);
+                                totalDiversos++;
+                            }
+                        }
+                    })
+                }
+        ).then(aux);
+            }
+    }else{
+        if(lista === null){
+            lista =
+        produtoService.listaProdutos().then(
+            data =>
+            {
+                const filtro = valorTexto; 
+                data.forEach(elemento =>
+                    {
+                        if(elemento.nome ==filtro){
+                            if(elemento.categoria === "Star Wars"){
+                                tabela1.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
+                                    elemento.categoria,elemento.id));
+                            }else if(elemento.categoria === "Console"){
+                                tabela2.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
+                                    elemento.categoria,elemento.id));
+                            }else if(elemento.categoria === "Diverso"){
+                                tabela3.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
+                                    elemento.categoria,elemento.id));
+                            }
+                        }
+                    }
+                )
+            }
+        )}
+    }*/
     }
 
+
+const botaoBuscar = document.querySelector(".botaoBuscar");
+
+botaoBuscar.addEventListener(
+    "click",
+    buscarProdutos
+);
 
 const tabela1 = document.querySelector('[data-tabela1]');
 const tabela2 = document.querySelector('[data-tabela2]');
 const tabela3 = document.querySelector('[data-tabela3]');
 
-const http = new XMLHttpRequest();
+    const http = new XMLHttpRequest();
 
-http.open('GET','http://localhost:3000/profile');
+    http.open('GET','http://localhost:3000/profile');
+    
+    http.send();
 
-http.send();
 
-http.onload = produtoService.listaProdutos().then(
-    data =>
-    {
-            let totalStarWars = 0;
-            let totalConsoles = 0;
-            let totalDiversos = 0;
-            let ids1 = [];
-            let ids2 = [];
-            let ids3 = [];
+const item = localStorage.getItem('filtro');
 
-            data.forEach(elemento => {
-                if(elemento.categoria === "Star Wars"){
-                    if(totalStarWars < 6 && procuraId(ids1,elemento.id) == false){
-                        tabela1.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
-                        elemento.categoria,elemento.id));
-                        ids1.push(elemento.id);
-                        totalStarWars++;
+if(item.length == 0){
+    produtoService.listaProdutos().then(
+        data =>
+        {
+                let totalStarWars = 0;
+                let totalConsoles = 0;
+                let totalDiversos = 0;
+                let ids1 = [];
+                let ids2 = [];
+                let ids3 = [];
+    
+                data.forEach(elemento => {
+                    if(elemento.categoria === "Star Wars"){
+                        if(totalStarWars < 6 && procuraId(ids1,elemento.id) == false){
+                            tabela1.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
+                            elemento.categoria,elemento.id));
+                            ids1.push(elemento.id);
+                            totalStarWars++;
+                        }
+                    }else if(elemento.categoria === "Console"){
+                        if(totalConsoles < 6 && procuraId(ids2,elemento.id) == false){
+                            tabela2.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
+                            elemento.categoria,elemento.id));
+                            ids2.push(elemento.id);
+                            totalConsoles++;
+                        }
+                    }else if(elemento.categoria === "Diverso"){
+                        if(totalDiversos < 6 && procuraId(ids3,elemento.id) == false){
+                            tabela3.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
+                            elemento.categoria,elemento.id));
+                            ids3.push(elemento.id);
+                            totalDiversos++;
+                        }
                     }
-                }else if(elemento.categoria === "Console"){
-                    if(totalConsoles < 6 && procuraId(ids2,elemento.id) == false){
-                        tabela2.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
-                        elemento.categoria,elemento.id));
-                        ids2.push(elemento.id);
-                        totalConsoles++;
-                    }
-                }else if(elemento.categoria === "Diverso"){
-                    if(totalDiversos < 6 && procuraId(ids3,elemento.id) == false){
-                        tabela3.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
-                        elemento.categoria,elemento.id));
-                        ids3.push(elemento.id);
-                        totalDiversos++;
+                })
+            }
+    ).then(aux);
+}else{
+    const filtro = item; 
+    produtoService.listaProdutos().then(
+        data =>
+        {
+            data.forEach(elemento =>
+                {
+                    if(elemento.nome === filtro){
+                        if(elemento.categoria === "Star Wars"){
+                            tabela1.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
+                                elemento.categoria,elemento.id));
+                        }else if(elemento.categoria === "Console"){
+                            tabela2.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
+                                elemento.categoria,elemento.id));
+                        }else if(elemento.categoria === "Diverso"){
+                            tabela3.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
+                                elemento.categoria,elemento.id));
+                        }
                     }
                 }
-            })
+            )
         }
-).then(aux);
-//console.log(produtos);
+    )
+}    
+    
