@@ -2,6 +2,12 @@
 
 import {listaProdutos, produtoService} from "./produtoService.js";
 
+function validaFormulario(campo,mensagem){
+        campo.target.setCustomValidity(mensagem);
+}
+
+
+
 function procuraId(lista, id){
     for(let i of lista){
         if(i == id){
@@ -236,6 +242,26 @@ const tabela3 = document.querySelector('[data-tabela3]');
     
     http.send();
 
+var campoNome = document.getElementById('inputNome');
+var campoMensagem =document.getElementById('inputMensagem');
+
+campoNome.oninvalid = function(e){
+    e.target.setCustomValidity('');
+    if(e.target.value.length == 0){
+        e.target.setCustomValidity('O campo nome não deve estar vazio');
+    }else if(e.target.value.length > 40){
+        e.target.setCustomValidity('O campo nome deve ter no máximo tamanho 40');
+    }
+}
+
+campoMensagem.oninvalid = function(e){
+    e.target.setCustomValidity('');
+    if(e.target.value.length == 0){
+        e.target.setCustomValidity('O campo mensagem não deve estar vazio');
+    }else if(e.target.value.length > 120){
+        e.target.setCustomValidity('O campo mensagem deve ter no máximo tamanho 120');
+    }
+}
 
 const item = localStorage.getItem('filtro');
 

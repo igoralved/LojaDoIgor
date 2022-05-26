@@ -85,3 +85,23 @@ produtoService.listaProdutos().then(
         )}
     )
   
+    var campoNome = document.getElementById('inputNome');
+    var campoMensagem =document.getElementById('inputMensagem');
+    
+    campoNome.oninvalid = function(e){
+        e.target.setCustomValidity('');
+        if(e.target.value.length == 0){
+            e.target.setCustomValidity('O campo nome não deve estar vazio');
+        }else if(e.target.value.length > 40){
+            e.target.setCustomValidity('O campo nome deve ter no máximo tamanho 40');
+        }
+    }
+    
+    campoMensagem.oninvalid = function(e){
+        e.target.setCustomValidity('');
+        if(e.target.value.length == 0){
+            e.target.setCustomValidity('O campo mensagem não deve estar vazio');
+        }else if(e.target.value.length > 120){
+            e.target.setCustomValidity('O campo mensagem deve ter no máximo tamanho 120');
+        }
+    }
