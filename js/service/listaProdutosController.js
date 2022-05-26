@@ -155,73 +155,7 @@ function buscarProdutos(){
     const valorTexto = b.value;
     localStorage.setItem('filtro',valorTexto);
     recarregarPagina();
-    /*
-    if(valorTexto.length == 0){
-        if(lista === null){
-            lista =
-        produtoService.listaProdutos().then(
-            data =>
-            {
-                    let totalStarWars = 0;
-                    let totalConsoles = 0;
-                    let totalDiversos = 0;
-                    let ids1 = [];
-                    let ids2 = [];
-                    let ids3 = [];
-        
-                    data.forEach(elemento => {
-                        if(elemento.categoria === "Star Wars"){
-                            if(totalStarWars < 6 && procuraId(ids1,elemento.id) == false){
-                                tabela1.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
-                                elemento.categoria,elemento.id));
-                                ids1.push(elemento.id);
-                                totalStarWars++;
-                            }
-                        }else if(elemento.categoria === "Console"){
-                            if(totalConsoles < 6 && procuraId(ids2,elemento.id) == false){
-                                tabela2.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
-                                elemento.categoria,elemento.id));
-                                ids2.push(elemento.id);
-                                totalConsoles++;
-                            }
-                        }else if(elemento.categoria === "Diverso"){
-                            if(totalDiversos < 6 && procuraId(ids3,elemento.id) == false){
-                                tabela3.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
-                                elemento.categoria,elemento.id));
-                                ids3.push(elemento.id);
-                                totalDiversos++;
-                            }
-                        }
-                    })
-                }
-        ).then(aux);
-            }
-    }else{
-        if(lista === null){
-            lista =
-        produtoService.listaProdutos().then(
-            data =>
-            {
-                const filtro = valorTexto; 
-                data.forEach(elemento =>
-                    {
-                        if(elemento.nome ==filtro){
-                            if(elemento.categoria === "Star Wars"){
-                                tabela1.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
-                                    elemento.categoria,elemento.id));
-                            }else if(elemento.categoria === "Console"){
-                                tabela2.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
-                                    elemento.categoria,elemento.id));
-                            }else if(elemento.categoria === "Diverso"){
-                                tabela3.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
-                                    elemento.categoria,elemento.id));
-                            }
-                        }
-                    }
-                )
-            }
-        )}
-    }*/
+
     }
 
 
@@ -232,6 +166,35 @@ botaoBuscar.addEventListener(
     buscarProdutos
 );
 
+function enviaMensagem(){
+
+    var campoNome = document.getElementById('inputNome');
+    var campoMensagem =document.getElementById('inputMensagem');
+var valido = true;
+    campoNome.setCustomValidity('');
+        if(campoNome.value.length == 0){
+            campoNome.setCustomValidity('O campo nome não deve estar vazio');
+            valido = false;
+        }else if(campoNome.value.length > 40){
+            campoNome.setCustomValidity('O campo nome deve ter no máximo tamanho 40');
+            valido = false;
+        }
+    
+    campoMensagem.setCustomValidity('');
+        if(campoMensagem.value.length == 0){
+            campoMensagem.setCustomValidity('O campo mensagem não deve estar vazio');
+            valido = false;
+        }else if(campoMensagem.value.length > 120){
+            campoMensagem.setCustomValidity('O campo mensagem deve ter no máximo tamanho 120');
+            valido = false;
+        }
+
+    if(valido == true){
+    console.log('enviando');
+    }else{
+        console.log('não enviando');
+    }
+}
 const tabela1 = document.querySelector('[data-tabela1]');
 const tabela2 = document.querySelector('[data-tabela2]');
 const tabela3 = document.querySelector('[data-tabela3]');
@@ -242,26 +205,10 @@ const tabela3 = document.querySelector('[data-tabela3]');
     
     http.send();
 
-var campoNome = document.getElementById('inputNome');
-var campoMensagem =document.getElementById('inputMensagem');
+var botaoEnviar = document.getElementById('botaoEnviar');
 
-campoNome.oninvalid = function(e){
-    e.target.setCustomValidity('');
-    if(e.target.value.length == 0){
-        e.target.setCustomValidity('O campo nome não deve estar vazio');
-    }else if(e.target.value.length > 40){
-        e.target.setCustomValidity('O campo nome deve ter no máximo tamanho 40');
-    }
-}
+botaoEnviar.addEventListener("click",enviaMensagem);
 
-campoMensagem.oninvalid = function(e){
-    e.target.setCustomValidity('');
-    if(e.target.value.length == 0){
-        e.target.setCustomValidity('O campo mensagem não deve estar vazio');
-    }else if(e.target.value.length > 120){
-        e.target.setCustomValidity('O campo mensagem deve ter no máximo tamanho 120');
-    }
-}
 
 const item = localStorage.getItem('filtro');
 
@@ -326,4 +273,3 @@ if(item.length == 0){
         }
     )
 }    
-    
