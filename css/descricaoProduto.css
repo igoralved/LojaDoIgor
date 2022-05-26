@@ -1,5 +1,7 @@
 
-
+.similaresTexto{
+    text-align: center;
+}
 
 .descricaoProduto{
     margin-top:10px;
@@ -14,8 +16,8 @@
 }
 
 .fotoProduto{
-    width:auto;
-    height: auto;
+    width:10vw;
+    height: 20vh;
 }
 
 .nome{
@@ -64,5 +66,11 @@
 .imagemProduto{
     width: 10vw;
     height: 20vh;
+}
+
+.produtosSimilares {
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
 }
 

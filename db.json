@@ -47,30 +47,22 @@
             "imagem": ".././img/produtoStarWars6.png",
             "categoria":"Star Wars",
             "id":6
-        },
-        {
-            "nome": "Boneco Star Wars 7",
-            "preco": 25.00,
-            "descricao": "Proibido",
-            "imagem": ".././img/produtoStarWars6.png",
-            "categoria":"Star Wars",
-            "id":11
         },{
             "nome": "Console 1",
             "preco": 25.00,
             "descricao": "Recomendado",
             "imagem": ".././img/console1.png",
             "categoria":"Console",
-            "id":6
+            "id":8
         }
         ,
         {
             "nome": "Diverso 6",
             "preco": 25.00,
             "descricao": "Recomendado",
-            "imagem": ".././img/produtoStarWars1.png",
+            "imagem": ".././img/diverso1.png",
             "categoria":"Diverso",
-            "id":6
+            "id":9
         }
     ]
 }
