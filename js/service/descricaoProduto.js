@@ -15,16 +15,16 @@ const criaNovaLinhaProduto = (nome, preco,descricao,imagem,categoria,id) => {
 
     const conteudo = `
     <td>
+    <ul>
     <div class="descricaoProduto" id=${id}>
-    <div >
         <img class="fotoProduto" src=${imagem} alt=${nome}>
-    </div>
     <div class="informacoesProduto">
         <h1 class="nome">${nome}</h1>
         <h1 class="preco">R$${preco}</h1>
-        <h1 class="descricaoProduto">${descricao}</h1>
+        <h1 class="descricaoProdutoLinha">${descricao}</h1>
     </div>
 </div>
+</ul>
 </td>
     `;
     linhaNovoProduto.innerHTML = conteudo;
@@ -37,12 +37,19 @@ const criaSimilares = (nome, preco,descricao,imagem,categoria,id) => {
     const conteudo = `
     <td>
     <ul>
-    <div class="descricaoProduto" id=${id}>
-    <div >
+    <div class="descricaoProdutoSimilar" id=${id}>
+    
         <img class="fotoProduto" src=${imagem} alt=${nome}>
-    </div>
-    </ul>
+    
+    <a>
+            ${nome}
+        </a>
+        <a>
+            R$${preco}
+        </a>
+        <button type="submit" id="verProduto">Ver produto</button>
 </div>
+</ul>
 </td>
     `;
     linhaNovoProduto.innerHTML = conteudo;

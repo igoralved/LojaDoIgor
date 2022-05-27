@@ -3,16 +3,37 @@
     text-align: center;
 }
 
+.produtoDescrito{
+    margin-top:10px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+
 .descricaoProduto{
     margin-top:10px;
     display: flex;
     flex-direction:row;
     justify-content: center;
+    color: black;
+}
+
+.descricaoProdutoSimilar{
+    margin-top:10px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    color: black;
 }
 
 .informacoesProduto{
+    margin-top:10px;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
     display: flex;
     flex-direction: column;
+    text-align: left;
 }
 
 .fotoProduto{
@@ -30,10 +51,9 @@
     color:black;
 }
 
-.descricaoProduto{
+.descricaoProdutoLinha{
     font-size: 10px;
-    color:gray;
-
+    color:black;
 }
 
 .categoriaProdutos{
