@@ -1,6 +1,40 @@
 
 import {listaProdutos, produtoService} from "./produtoService.js"
 
+function login(){
+    window.location.href="../.././telas/login.html";
+}
+
+function enviaMensagem(){
+
+    var campoNome = document.getElementById('inputNome');
+    var campoMensagem =document.getElementById('inputMensagem');
+var valido = true;
+    campoNome.setCustomValidity('');
+        if(campoNome.value.length == 0){
+            campoNome.setCustomValidity('O campo nome não deve estar vazio');
+            valido = false;
+        }else if(campoNome.value.length > 40){
+            campoNome.setCustomValidity('O campo nome deve ter no máximo tamanho 40');
+            valido = false;
+        }
+    
+    campoMensagem.setCustomValidity('');
+        if(campoMensagem.value.length == 0){
+            campoMensagem.setCustomValidity('O campo mensagem não deve estar vazio');
+            valido = false;
+        }else if(campoMensagem.value.length > 120){
+            campoMensagem.setCustomValidity('O campo mensagem deve ter no máximo tamanho 120');
+            valido = false;
+        }
+
+    if(valido == true){
+    console.log('enviando');
+    }else{
+        console.log('não enviando');
+    }
+}
+
 function procuraId(lista, id){
     for(let i of lista){
         if(i == id){
@@ -9,13 +43,40 @@ function procuraId(lista, id){
     }return false;
 }
 
+function aux(){
+
+    var itenssimilares = Array.from(document.getElementsByClassName('similares'));
+    for(let p of itenssimilares){
+        p.addEventListener("click", event =>{
+            const id = p.querySelector(".descricaoProdutoSimilar").id;
+            console.log(id);
+            const url = `http://localhost:3000/profile/`+id;
+
+            fetch(url).then(response =>{
+                return response.json();
+            }).then(data =>{
+                localStorage.setItem('produtoId',
+                data.id
+            );
+            localStorage.setItem('produtoPreco',
+            data.preco);
+            localStorage.setItem('produtoNome',
+            data.nome);
+            localStorage.setItem('produtoCategoria',data.categoria);
+            localStorage.setItem('produtoImagem',data.imagem);
+            localStorage.setItem('produtoDescricao',data.descricao);
+                window.location.href = "./descricaoProduto.html"
+            }
+        )
+        });
+    }
+}
 
 const criaNovaLinhaProduto = (nome, preco,descricao,imagem,categoria,id) => {
     const linhaNovoProduto = document.createElement('tr');
 
     const conteudo = `
     <td>
-    <ul>
     <div class="descricaoProduto" id=${id}>
         <img class="fotoProduto" src=${imagem} alt=${nome}>
     <div class="informacoesProduto">
@@ -24,7 +85,6 @@ const criaNovaLinhaProduto = (nome, preco,descricao,imagem,categoria,id) => {
         <h1 class="descricaoProdutoLinha">${descricao}</h1>
     </div>
 </div>
-</ul>
 </td>
     `;
     linhaNovoProduto.innerHTML = conteudo;
@@ -35,8 +95,7 @@ const criaSimilares = (nome, preco,descricao,imagem,categoria,id) => {
     const linhaNovoProduto = document.createElement('tr');
 
     const conteudo = `
-    <td>
-    <ul>
+    <td><ul class='similares'>
     <div class="descricaoProdutoSimilar" id=${id}>
     
         <img class="fotoProduto" src=${imagem} alt=${nome}>
@@ -48,8 +107,7 @@ const criaSimilares = (nome, preco,descricao,imagem,categoria,id) => {
             R$${preco}
         </a>
         <button type="submit" id="verProduto">Ver produto</button>
-</div>
-</ul>
+</div></ul>
 </td>
     `;
     linhaNovoProduto.innerHTML = conteudo;
@@ -65,6 +123,14 @@ const produtoPreco = localStorage.getItem('produtoPreco');
 const produtoDescricao = localStorage.getItem('produtoDescricao');
 const produtoImagem = localStorage.getItem('produtoImagem');
 const produtoCategoria = localStorage.getItem('produtoCategoria');
+
+var botaoEnviar = document.getElementById('botaoEnviar');
+
+botaoEnviar.addEventListener("click",enviaMensagem);
+
+var botaoLogin = document.getElementById('botaoLogin');
+
+botaoLogin.addEventListener("click",login);
 
 console.log(produtoId);
 produtoService.listaProdutos().then(
@@ -90,7 +156,7 @@ produtoService.listaProdutos().then(
             }
         }
         )}
-    )
+    ).then(aux);
   
     var campoNome = document.getElementById('inputNome');
     var campoMensagem =document.getElementById('inputMensagem');

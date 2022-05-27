@@ -2,11 +2,9 @@
 
 import {listaProdutos, produtoService} from "./produtoService.js";
 
-function validaFormulario(campo,mensagem){
-        campo.target.setCustomValidity(mensagem);
+function login(){
+    window.location.href="../.././telas/login.html";
 }
-
-
 
 function procuraId(lista, id){
     for(let i of lista){
@@ -205,9 +203,14 @@ const tabela3 = document.querySelector('[data-tabela3]');
     
     http.send();
 
-var botaoEnviar = document.getElementById('botaoEnviar');
+    var botaoEnviar = document.getElementById('botaoEnviar');
 
 botaoEnviar.addEventListener("click",enviaMensagem);
+
+var botaoLogin = document.getElementById('botaoLogin');
+
+botaoLogin.addEventListener("click",login);
+
 
 
 const item = localStorage.getItem('filtro');
@@ -271,5 +274,5 @@ if(item.length == 0){
                 }
             )
         }
-    )
+    ).then(aux);
 }    

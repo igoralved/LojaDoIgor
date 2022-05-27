@@ -19,7 +19,7 @@
                 </form>
             </div>
             <div class="botaoIniciarSessao">
-                <button type="submit" class="botaoLogin">Login</button>
+                <button type="submit" class="botaoLogin" id="botaoLogin">Login</button>
             </div>
         </header>
         <main>
@@ -27,11 +27,15 @@
             <h1 class="iniciarSessaoTitulo">Iniciar sessão</h1>
             <form action="#">
                 <h2>E-mail</h2>
-                <input type="email" placeholder="Escreva seu email" class="emailInput">
+                <input type="email" placeholder="Escreva seu email" class="emailInput"
+                id="emailInput"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
                 <h2>Senha</h2>
-                <input type="password" placeholder="Escreva sua senha" class="senhaInput">
+                <input type="password" placeholder="Escreva sua senha" class="senhaInput"
+                id="senhaInput"
+                required>
                 <h2>
-                <button type="submit" class="loginButton">Iniciar sessão</button>
+                <button type="submit" class="loginButton" id="loginButton">Iniciar sessão</button>
             </h2>
             </form>
         </div>
@@ -91,5 +95,6 @@
             <div class="desenvolvedor">Desenvolvido por Igor Alves</div>
             <div class="desenvolvedor">2022</div>
         </footer>
+        <script type="module" src=".././js/service/login.js"></script>
     </body>
 </html>
