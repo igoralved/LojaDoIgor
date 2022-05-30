@@ -1,6 +1,7 @@
 
 
 
+
 export const listaProdutos = () => {
     return fetch('http://localhost:3000/profile',
     {
@@ -30,11 +31,29 @@ export const obtemProduto = (id) => {
     )
 }
 
-
+export const adicionarProduto = (nome,preco,descricao,imagem,categoria) => {
+    return fetch('http://localhost:3000/profile',
+    {
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify(
+            {
+                nome:nome,
+                preco:preco,
+                descricao:descricao,
+                imagem:imagem,
+                categoria:"Star Wars",
+            }
+        )
+    })
+}
 
 export const produtoService = {
     listaProdutos,
-    obtemProduto
+    obtemProduto,
+    adicionarProduto
 }
 
 

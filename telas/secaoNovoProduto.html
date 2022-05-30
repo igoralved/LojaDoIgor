@@ -19,37 +19,48 @@
                 </form>
             </div>
             <div class="botaoIniciarSessao">
-                <button type="submit" class="botaoLogin">Login</button>
+                <button type="submit" class="botaoLogin" id='botaoLogin'>Login</button>
             </div>
         </header>
         <main>
             <div class="menuAdicionarNovoProduto">
-                <h1>Adicionar novo produto</h1>
-                <form class="adicionarImagemProduto">
-                    <input type="image" src=".././img/dragAndDrop.png" placeholder="Arraste para adicionar uma imagem para o produto" class="botaoDragAndDrop">
+                <form>
+                    <h1>Adicionar novo produto</h1>
+                    <div class="adicionarImagemProduto">
+                    <div class="botaoDragAndDrop">
+                        <label for="botaoDragAndDrop">Procure no computador uma imagem para adicionar uma imagem para o produto</label>
+                        <input type="file" 
+                        placeholder="Procure no computador uma imagem para adicionar uma imagem para o produto"
+                        id="botaoDragAndDrop"
+                        accept=".png" multiple required>
+                    </div>
+                    <div class="preview">
+                    <img class="imagemPreview" src=".././img/dragAndDrop.png">
+                    </div>
+                </div>
+                    <!--
                     <h1 class="textoOu"> ou </h1>
                     <div>
-                        <button class="procurarNoComputador">Procure no seu computador</button>
-                    </div>
+                        <button class="procurarNoComputador" id='procurarNoComputador'>Procure no seu computador</button>
+                    </div>-->
 
-                </form>
                 <div>
                     <h1 class="nomeCampo">Nome do produto</h1>
-                    <input type="text">
+                    <input type="text" id='nomeProduto' maxlength="20" required>
                 </div>
                 <div>
                     <h1 class="nomeCampo">Preço do produto</h1>
-                    <input type="number">
+                    <input type="number" id='precoProduto' required>
                 </div>
                 <div>
                     <h1 class="nomeCampo">Descrição do produto</h1>
-                    <input type="text">
+                    <input type="text" id='descricaoProduto' maxlength="150" required>
                 </div>
                 <h1></h1>
                 <div>
-                    <button class="botaoAdicionar">Adicionar produto</button>
+                    <button class="botaoAdicionar" id='botaoAdicionar'>Adicionar produto</button>
                 </div>
-            </div>
+            </div></form>
         </main>
         <footer class="rodape">
             <div class="formularioDeContato">
@@ -96,7 +107,7 @@
                         <h2>Mensagem</h2>
                         <input type="text"  id="inputMensagem" name="search" maxlength="120" required>
                         <h2>
-                            <button type="submit" id="botaoEnviar" class="botaoFalarConosco">Enviar mensagem</button>
+                            <button type="submit" id='botaoEnviar' class="botaoFalarConosco">Enviar mensagem</button>
                         </h2>
                     </form>
                 </div>
@@ -105,5 +116,6 @@
             <div class="desenvolvedor">Desenvolvido por Igor Alves</div>
             <div class="desenvolvedor">2022</div>
         </footer>
+        <script type="module" src=".././js/service/novoProduto.js"></script>
     </body>
 </html>

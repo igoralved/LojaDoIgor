@@ -1,6 +1,6 @@
 
 
-import {listaProdutos, produtoService} from "./produtoService.js";
+import {listaProdutos, produtoService, adicionarProduto} from "./produtoService.js";
 
 function login(){
     window.location.href="../.././telas/login.html";
@@ -12,6 +12,10 @@ function procuraId(lista, id){
             return true;
         }
     }return false;
+}
+
+function verTodosProdutos(){
+    window.location.href = "../.././telas/secaoTodosProdutos.html";
 }
 
 const criaNovaLinha = (nome, preco,descricao,imagem,categoria,id) => {
@@ -203,7 +207,7 @@ const tabela3 = document.querySelector('[data-tabela3]');
     
     http.send();
 
-    var botaoEnviar = document.getElementById('botaoEnviar');
+var botaoEnviar = document.getElementById('botaoEnviar');
 
 botaoEnviar.addEventListener("click",enviaMensagem);
 
@@ -211,7 +215,11 @@ var botaoLogin = document.getElementById('botaoLogin');
 
 botaoLogin.addEventListener("click",login);
 
+var botoesVerTudo = document.getElementsByClassName("iconeVerTudo");
 
+for(let b of botoesVerTudo){
+    b.addEventListener("click",verTodosProdutos);
+}
 
 const item = localStorage.getItem('filtro');
 

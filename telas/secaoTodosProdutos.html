@@ -15,239 +15,24 @@
             <div class="buscadorItens">
                 <form action="#">
                     <input type="text" placeholder="O que deseja encontrar?" name="search">
-                    <button type="submit" class="botaoBuscar">Buscar</button>
+                    <button type="submit" class="botaoBuscar" id="botaoBuscar">Buscar</button>
                 </form>
             </div>
             <div class="botaoIniciarSessao">
-                <button type="submit" class="botaoLogin">Login</button>
+                <button type="submit" class="botaoLogin" id="botaoLogin">Login</button>
             </div>
         </header>
         <main>
                 
             <div class="nomeCategoriaProdutosEBotaoAdicionar">
                 <div><h1 class="tituloTodosProdutos">Todos os produtos</h1></div>
-                <div><button class="botaoAdicionarProduto">Adicionar produto</button></div>
+                <div><button class="botaoAdicionarProduto" id='botaoAdicionarProduto'>Adicionar produto</button></div>
             </div>
+            <table>
+                    <tbody data-tabela class="produtos">
+                </tbody>
+                </table>
 
-                <ul class="produtos">
-                    <li class="produto">
-                        <a>
-                            <img src=".././img/produtoStarWars1.png" alt="Produto XYZ" class="imagemProduto">
-                        </a>
-                        <a>
-                            Produto XYZ
-                        </a>
-                        <a>
-                            R$60,00
-                        </a>
-                        <a href="#">Ver produto</a>
-                    </li>
-                    <li class="produto">
-                        <a>
-                            <img src=".././img/produtoStarWars2.png" alt="Produto XYZ" class="imagemProduto">
-                        </a>
-                        <a>
-                            Produto XYZ
-                        </a>
-                        <a>
-                            R$60,00
-                        </a>
-                        <a href="#">Ver produto</a>
-                    </li>
-                    <li class="produto">
-                        <a>
-                            <img src=".././img/produtoStarWars3.png" alt="Produto XYZ" class="imagemProduto">
-                        </a>
-                        <a>
-                            Produto XYZ
-                        </a>
-                        <a>
-                            R$60,00
-                        </a>
-                        <a href="#">Ver produto</a>
-                    </li>
-                    <li class="produto">
-                        <a>
-                            <img src=".././img/produtoStarWars4.png" alt="Produto XYZ" class="imagemProduto">
-                        </a>
-                        <a>
-                            Produto XYZ
-                        </a>
-                        <a>
-                            R$60,00
-                        </a>
-                        <a href="#">Ver produto</a>
-                    </li>
-                    <li class="produto">
-                        <a>
-                            <img src=".././img/produtoStarWars5.png" alt="Produto XYZ" class="imagemProduto">
-                        </a>
-                        <a>
-                            Produto XYZ
-                        </a>
-                        <a>
-                            R$60,00
-                        </a>
-                        <a href="#">Ver produto</a>
-                    </li>
-                    <li class="produto">
-                        <a>
-                            <img src=".././img/produtoStarWars6.png" alt="Produto XYZ" class="imagemProduto">
-                        </a>
-                        <a>
-                            Produto XYZ
-                        </a>
-                        <a>
-                            R$60,00
-                        </a>
-                        <a href="#">Ver produto</a>
-                    </li>
-                    <li class="produto">
-                        <a>
-                            <img src=".././img/console1.png" alt="Produto XYZ" class="imagemProduto">
-                        </a>
-                        <a>
-                            Produto XYZ
-                        </a>
-                        <a>
-                            R$60,00
-                        </a>
-                        <a href="#">Ver produto</a>
-                    </li>
-                    <li class="produto">
-                        <a>
-                            <img src=".././img/console2.png" alt="Produto XYZ" class="imagemProduto">
-                        </a>
-                        <a>
-                            Produto XYZ
-                        </a>
-                        <a>
-                            R$60,00
-                        </a>
-                        <a href="#">Ver produto</a>
-                    </li>
-                    <li class="produto">
-                        <a>
-                            <img src=".././img/console3.png" alt="Produto XYZ" class="imagemProduto">
-                        </a>
-                        <a>
-                            Produto XYZ
-                        </a>
-                        <a>
-                            R$60,00
-                        </a>
-                        <a href="#">Ver produto</a>
-                    </li>
-                    <li class="produto">
-                        <a>
-                            <img src=".././img/console4.png" alt="Produto XYZ" class="imagemProduto">
-                        </a>
-                        <a>
-                            Produto XYZ
-                        </a>
-                        <a>
-                            R$60,00
-                        </a>
-                        <a href="#">Ver produto</a>
-                    </li>
-                    <li class="produto">
-                        <a>
-                            <img src=".././img/console5.png" alt="Produto XYZ" class="imagemProduto">
-                        </a>
-                        <a>
-                            Produto XYZ
-                        </a>
-                        <a>
-                            R$60,00
-                        </a>
-                        <a href="#">Ver produto</a>
-                    </li>
-                    <li class="produto">
-                        <a>
-                            <img src=".././img/console6.png" alt="Produto XYZ" class="imagemProduto">
-                        </a>
-                        <a>
-                            Produto XYZ
-                        </a>
-                        <a>
-                            R$60,00
-                        </a>
-                        <a href="#">Ver produto</a>
-                    </li>
-                    <li class="produto">
-                        <a>
-                            <img src=".././img/diverso1.png" alt="Produto XYZ" class="imagemProduto">
-                        </a>
-                        <a>
-                            Produto XYZ
-                        </a>
-                        <a>
-                            R$60,00
-                        </a>
-                        <a href="#">Ver produto</a>
-                    </li>
-                    <li class="produto">
-                        <a>
-                            <img src=".././img/diverso2.png" alt="Produto XYZ" class="imagemProduto">
-                        </a>
-                        <a>
-                            Produto XYZ
-                        </a>
-                        <a>
-                            R$60,00
-                        </a>
-                        <a href="#">Ver produto</a>
-                    </li>
-                    <li class="produto">
-                        <a>
-                            <img src=".././img/diverso3.png" alt="Produto XYZ" class="imagemProduto">
-                        </a>
-                        <a>
-                            Produto XYZ
-                        </a>
-                        <a>
-                            R$60,00
-                        </a>
-                        <a href="#">Ver produto</a>
-                    </li>
-                    <li class="produto">
-                        <a>
-                            <img src=".././img/diverso4.png" alt="Produto XYZ" class="imagemProduto">
-                        </a>
-                        <a>
-                            Produto XYZ
-                        </a>
-                        <a>
-                            R$60,00
-                        </a>
-                        <a href="#">Ver produto</a>
-                    </li>
-                    <li class="produto">
-                        <a>
-                            <img src=".././img/diverso5.png" alt="Produto XYZ" class="imagemProduto">
-                        </a>
-                        <a>
-                            Produto XYZ
-                        </a>
-                        <a>
-                            R$60,00
-                        </a>
-                        <a href="#">Ver produto</a>
-                    </li>
-                    <li class="produto">
-                        <a>
-                            <img src=".././img/diverso6.png" alt="Produto XYZ" class="imagemProduto">
-                        </a>
-                        <a>
-                            Produto XYZ
-                        </a>
-                        <a>
-                            R$60,00
-                        </a>
-                        <a href="#">Ver produto</a>
-                    </li>
-                </ul>
-            </section>
         </main>
         <footer class="rodape">
             <div class="formularioDeContato">
@@ -303,5 +88,6 @@
             <div class="desenvolvedor">Desenvolvido por Igor Alves</div>
             <div class="desenvolvedor">2022</div>
         </footer>
+        <script type="module" src=".././js/service/listaTodosProdutos.js"></script>
     </body>
 </html>

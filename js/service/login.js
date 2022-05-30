@@ -1,4 +1,4 @@
-
+import {listaProdutos, produtoService,adicionarProduto} from "./produtoService.js";
 
 function enviaMensagem(){
 

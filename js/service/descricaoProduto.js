@@ -1,5 +1,5 @@
 
-import {listaProdutos, produtoService} from "./produtoService.js"
+import {listaProdutos, produtoService,adicionarProduto} from "./produtoService.js"
 
 function login(){
     window.location.href="../.././telas/login.html";
@@ -76,7 +76,7 @@ const criaNovaLinhaProduto = (nome, preco,descricao,imagem,categoria,id) => {
     const linhaNovoProduto = document.createElement('tr');
 
     const conteudo = `
-    <td>
+    <td class="produtoDescrito">
     <div class="descricaoProduto" id=${id}>
         <img class="fotoProduto" src=${imagem} alt=${nome}>
     <div class="informacoesProduto">
@@ -116,6 +116,7 @@ const criaSimilares = (nome, preco,descricao,imagem,categoria,id) => {
 
 const produtotable = document.querySelector('[data-tabela]');
 const similarestable = document.querySelector('[data-tabelaSimilares]');
+
 
 const produtoId = localStorage.getItem('produtoId');
 const produtoNome = localStorage.getItem('produtoNome');
