@@ -47,7 +47,11 @@ export const adicionarProduto = (nome,preco,descricao,imagem,categoria) => {
                 categoria:"Star Wars",
             }
         )
-    })
+    }).then(
+        resposta => {
+            return resposta.body;
+        }
+    )
 }
 
 export const produtoService = {

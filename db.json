@@ -63,28 +63,6 @@
       "imagem": ".././img/diverso1.png",
       "categoria": "Diverso",
       "id": 9
-    },
-    {
-      "nome": "zz",
-      "preco": "19",
-      "descricao": "bom",
-      "imagem": "C:\\fakepath\\console2.png",
-      "categoria": "Star Wars",
-      "id": 10
-    },
-    {
-      "nome": "a",
-      "preco": "12",
-      "descricao": "aaa",
-      "categoria": "Star Wars",
-      "id": 11
-    },
-    {
-      "nome": "a",
-      "preco": "12",
-      "descricao": "a",
-      "categoria": "Star Wars",
-      "id": 12
     }
   ]
 }

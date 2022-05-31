@@ -24,15 +24,15 @@
         </header>
         <main>
             <div class="menuAdicionarNovoProduto">
-                <form>
+                <form data-form>
                     <h1>Adicionar novo produto</h1>
                     <div class="adicionarImagemProduto">
                     <div class="botaoDragAndDrop">
                         <label for="botaoDragAndDrop">Procure no computador uma imagem para adicionar uma imagem para o produto</label>
-                        <input type="file" 
+                        <input data-imagem type="file" 
                         placeholder="Procure no computador uma imagem para adicionar uma imagem para o produto"
                         id="botaoDragAndDrop"
-                        accept=".png" multiple required>
+                        accept=".jpg, .jpeg, .png" multiple required>
                     </div>
                     <div class="preview">
                     <img class="imagemPreview" src=".././img/dragAndDrop.png">
@@ -46,15 +46,15 @@
 
                 <div>
                     <h1 class="nomeCampo">Nome do produto</h1>
-                    <input type="text" id='nomeProduto' maxlength="20" required>
+                    <input data-nome type="text" id='nomeProduto' maxlength="20" required>
                 </div>
                 <div>
                     <h1 class="nomeCampo">Preço do produto</h1>
-                    <input type="number" id='precoProduto' required>
+                    <input data-preco type="number" id='precoProduto' required>
                 </div>
                 <div>
                     <h1 class="nomeCampo">Descrição do produto</h1>
-                    <input type="text" id='descricaoProduto' maxlength="150" required>
+                    <input data-descricao type="text" id='descricaoProduto' maxlength="150" required>
                 </div>
                 <h1></h1>
                 <div>

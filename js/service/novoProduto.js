@@ -72,7 +72,10 @@ function updateinputimage(){
         preview.appendChild(para);
     }else{
         const file = curFiles[0];
-        if(fileTypes.includes(file.type)){
+        if(validFileType(file)){
+
+            var reader = new FileReader();
+
             const image = document.createElement('img');
             image.class="imagemPreview";
             image.src = URL.createObjectURL(file);
@@ -80,6 +83,7 @@ function updateinputimage(){
             image.width = "100"; 
             image.height = "100"; 
             preview.appendChild(image);
+            reader.readAsDataURL(file);
         }
 
     }
@@ -96,6 +100,9 @@ function adicionaProduto(){
     campoImagem.setCustomValidity('');
     if(campoImagem.value.length == 0){
         campoImagem.setCustomValidity('O produto precisa de uma imagem');
+        valido = false;
+    }else if(!file_exists(campoImagem.value)){
+        campoImagem.setCustomValidity('Imagem inexsitente');
         valido = false;
     }
     campoNome.setCustomValidity('');
@@ -118,13 +125,13 @@ function adicionaProduto(){
         campoDescricao.setCustomValidity('O campo descricao não pode ter mais de 150 caracteres');
         valido = false;
     }
-    if(valido == true){
+    if(valido){
+        console.log('produto adicionado');
         produtoService.adicionarProduto(
             campoNome.value,campoPreco.value,campoDescricao.value,
-            campoImagem.value.src,'');
-        console.log('produto adicionado');
+            campoImagem.value,'');
     }else{
-
+        console.log('produto não adicionado');
     }
 }
 
@@ -140,6 +147,59 @@ const input = document.querySelector("#botaoDragAndDrop");
 
 input.addEventListener('change',updateinputimage);
 
-const botaoAdicionar = document.getElementById('botaoAdicionar');
+const botaoAdicionar = document.querySelector('[data-form]');
 
-botaoAdicionar.addEventListener("click",adicionaProduto);
+botaoAdicionar.addEventListener('submit',(evento) => {
+
+    evento.preventDefault();
+
+    const campoImagem = evento.target.querySelector('[data-imagem]');
+    const campoNome = evento.target.querySelector('[data-nome]');
+    const campoPreco = evento.target.querySelector('[data-preco]');
+    const campoDescricao = evento.target.querySelector('[data-descricao]');
+
+    const imagem = campoImagem.value;
+    const nome = campoNome.value;
+    const preco = campoPreco.value;
+    const descricao = campoDescricao.value;
+
+    var valido = true;
+    campoImagem.setCustomValidity('');
+    if(imagem.length == 0){
+        campoImagem.setCustomValidity('O produto precisa de uma imagem');
+        valido = false;
+    }
+    campoNome.setCustomValidity('');
+    if(nome.length == 0){
+        campoNome.setCustomValidity('O campo nome não pode estar vazio');
+        valido = false;
+    }else if(nome.length > 20){
+        campoNome.setCustomValidity('O campo nome não pode ter mais de 20 caracteres');
+        valido = false;
+    }
+    campoPreco.setCustomValidity('');
+    if(preco.length == 0){
+        campoPreco.setCustomValidity('O campo preco não pode estar vazio');
+        valido = false;
+    }campoDescricao.setCustomValidity('');
+    if(descricao.length == 0){
+        campoDescricao.setCustomValidity('O campo descricao não pode estar vazio');
+        valido = false;
+    }else if(descricao.length > 150){
+        campoDescricao.setCustomValidity('O campo descricao não pode ter mais de 150 caracteres');
+        valido = false;
+    }
+    if(valido){
+        console.log('produto adicionado');
+        produtoService.adicionarProduto(
+            nome,preco,descricao,
+            imagem,'').then(() => {
+                window.location.href = '../.././telas/secaoTodosProdutos.html';
+            });
+    }else{
+        alert('produto não adicionado');
+    }
+});
+
+//# sourceMappingURL=/path/to/script.js.map;
+app.use(express.static('public'));

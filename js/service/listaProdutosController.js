@@ -201,11 +201,11 @@ const tabela1 = document.querySelector('[data-tabela1]');
 const tabela2 = document.querySelector('[data-tabela2]');
 const tabela3 = document.querySelector('[data-tabela3]');
 
-    const http = new XMLHttpRequest();
+    //const http = new XMLHttpRequest();
 
-    http.open('GET','http://localhost:3000/profile');
+    //http.open('GET','http://localhost:3000/profile');
     
-    http.send();
+    //http.send();
 
 var botaoEnviar = document.getElementById('botaoEnviar');
 

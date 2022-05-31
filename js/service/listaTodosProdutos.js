@@ -89,9 +89,11 @@ produtoService.listaProdutos().then(
     {
 
             data.forEach(elemento => {
+                console.log(elemento.imagem);
+                if(true){
                         tabela.appendChild(criaNovoProduto(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
                         elemento.categoria,elemento.id));
-                        
+                    }   
                 }
             )
             }
