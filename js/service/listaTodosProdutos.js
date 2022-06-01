@@ -69,6 +69,32 @@ const criaNovoProduto = (nome, preco,descricao,imagem,categoria,id) => {
     return linhaNovoProduto;
 }
 
+
+function buscarProdutos(){
+    console.log("trocou");
+
+    const url = `http://localhost:3000/profile`;
+
+    fetch(url).then(response =>{
+        return response.json();
+    }).then(()=>{
+        const b = document.querySelector("#textoBuscar");
+    const valorTexto = b.value;
+        localStorage.setItem('filtro',valorTexto);
+    window.location.href = "../.././telas/index.html";
+    }
+    );
+
+}
+
+const botaoBuscar = document.querySelector(".botaoBuscar");
+
+    botaoBuscar.addEventListener(
+        "click",
+        buscarProdutos
+    );
+
+
 const tabela = document.querySelector('[data-tabela]');
 
 var botaoEnviar = document.getElementById('botaoEnviar');

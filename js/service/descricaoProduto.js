@@ -1,6 +1,8 @@
 
 import {listaProdutos, produtoService,adicionarProduto} from "./produtoService.js"
 
+
+
 function login(){
     window.location.href="../.././telas/login.html";
 }
@@ -114,6 +116,31 @@ const criaSimilares = (nome, preco,descricao,imagem,categoria,id) => {
     return linhaNovoProduto;
 }
 
+function buscarProdutos(){
+    console.log("trocou");
+    
+    const b = document.querySelector("#textoBuscar");
+    const valorTexto = b.value;
+
+    const url = `http://localhost:3000/profile`;
+
+    fetch(url).then(response =>{
+        return response.json();
+    }).then(()=>{
+            localStorage.setItem('filtro',valorTexto);
+    window.location.href = "../.././telas/index.html";
+    }
+    );
+
+}
+
+const botaoBuscar = document.querySelector(".botaoBuscar");
+
+    botaoBuscar.addEventListener(
+        "click",
+        buscarProdutos
+    );
+
 const produtotable = document.querySelector('[data-tabela]');
 const similarestable = document.querySelector('[data-tabelaSimilares]');
 
@@ -134,6 +161,7 @@ var botaoLogin = document.getElementById('botaoLogin');
 botaoLogin.addEventListener("click",login);
 
 console.log(produtoId);
+
 produtoService.listaProdutos().then(
     data =>
     {

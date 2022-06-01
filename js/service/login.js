@@ -56,6 +56,24 @@ function loga(){
     }
 }
 
+function buscarProdutos(){
+    console.log("trocou");
+
+    const b = document.querySelector("#textoBuscar");
+    const valorTexto = b.value;
+
+    const url = `http://localhost:3000/profile`;
+
+    fetch(url).then(response =>{
+        return response.json();
+    }).then(()=>{
+        localStorage.setItem('filtro',valorTexto);
+    window.location.href = "../.././telas/index.html";
+    }
+    );
+
+}
+
 
 var botaoLogar = document.getElementById('loginButton');
 
@@ -64,3 +82,10 @@ botaoLogar.addEventListener("click",loga);
 var botaoEnviar = document.getElementById('botaoEnviar');
 
 botaoEnviar.addEventListener("click",enviaMensagem);
+
+const botaoBuscar = document.querySelector(".botaoBuscar");
+
+    botaoBuscar.addEventListener(
+        "click",
+        buscarProdutos
+    );

@@ -135,6 +135,31 @@ function adicionaProduto(){
     }
 }
 
+function buscarProdutos(){
+    console.log("trocou");
+
+    const b = document.querySelector("#textoBuscar");
+    const valorTexto = b.value;
+
+    const url = `http://localhost:3000/profile`;
+
+    fetch(url).then(response =>{
+        return response.json();
+    }).then(()=>{
+        localStorage.setItem('filtro',valorTexto);
+    window.location.href = "../.././telas/index.html";
+    }
+    );
+
+}
+
+const botaoBuscar = document.querySelector(".botaoBuscar");
+
+    botaoBuscar.addEventListener(
+        "click",
+        buscarProdutos
+    );
+
 var botaoEnviar = document.getElementById('botaoEnviar');
 
 botaoEnviar.addEventListener("click",enviaMensagem);
@@ -201,5 +226,3 @@ botaoAdicionar.addEventListener('submit',(evento) => {
     }
 });
 
-//# sourceMappingURL=/path/to/script.js.map;
-app.use(express.static('public'));

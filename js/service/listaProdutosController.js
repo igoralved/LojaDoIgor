@@ -2,6 +2,7 @@
 
 import {listaProdutos, produtoService, adicionarProduto} from "./produtoService.js";
 
+
 function login(){
     window.location.href="../.././telas/login.html";
 }
@@ -63,6 +64,8 @@ function aux(){
     var itens1 = Array.from(document.getElementsByClassName('produtosStarWars'));
     var itens2 = Array.from(document.getElementsByClassName('produtosConsoles'));
     var itens3 = Array.from(document.getElementsByClassName('produtosDiversos'));
+
+    
     
     console.log(itens1);
     for(let p of itens1){
@@ -153,20 +156,13 @@ function recarregarPagina(){
 }
 
 function buscarProdutos(){
+    console.log("trocou");
     const b = document.querySelector("#textoBuscar");
     const valorTexto = b.value;
     localStorage.setItem('filtro',valorTexto);
-    recarregarPagina();
 
+    window.location.href = "../.././telas/index.html";
     }
-
-
-const botaoBuscar = document.querySelector(".botaoBuscar");
-
-botaoBuscar.addEventListener(
-    "click",
-    buscarProdutos
-);
 
 function enviaMensagem(){
 
@@ -261,26 +257,53 @@ if(item.length == 0){
             }
     ).then(aux);
 }else{
-    const filtro = item; 
     produtoService.listaProdutos().then(
         data =>
         {
+            const filtro = item; 
+            let totalStarWars = 0;
+                let totalConsoles = 0;
+                let totalDiversos = 0;
+                let ids1 = [];
+                let ids2 = [];
+                let ids3 = [];
+
             data.forEach(elemento =>
                 {
-                    if(elemento.nome === filtro){
-                        if(elemento.categoria === "Star Wars"){
-                            tabela1.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
+                        if(elemento.categoria === "Star Wars" && elemento.nome === filtro
+                        ){
+                            if(totalStarWars < 6 && procuraId(ids1,elemento.id) == false){
+                                tabela1.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
                                 elemento.categoria,elemento.id));
-                        }else if(elemento.categoria === "Console"){
+                                ids1.push(elemento.id);
+                            totalStarWars++;
+                            }
+                        }else if(elemento.categoria === "Console" && elemento.nome === filtro
+                        ){
+                            if(totalConsoles < 6 && procuraId(ids2,elemento.id) == false){
                             tabela2.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
                                 elemento.categoria,elemento.id));
-                        }else if(elemento.categoria === "Diverso"){
+                                ids2.push(elemento.id);
+                            totalConsoles++;
+                            }
+                        }else if(elemento.categoria === "Diverso" && elemento.nome === filtro
+                        ){
+                            if(totalDiversos < 6 && procuraId(ids3,elemento.id) == false){
                             tabela3.appendChild(criaNovaLinha(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
                                 elemento.categoria,elemento.id));
-                        }
+                                ids3.push(elemento.id);
+                            totalDiversos++;
+                            }
                     }
                 }
             )
         }
     ).then(aux);
 }    
+
+const botaoBuscar = document.querySelector(".botaoBuscar");
+
+botaoBuscar.addEventListener(
+    "click",
+    buscarProdutos
+);
