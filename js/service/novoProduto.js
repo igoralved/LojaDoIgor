@@ -1,4 +1,7 @@
-import {listaProdutos, produtoService, adicionarProduto} from "./produtoService.js"
+
+import {listaProdutos, produtoService, adicionarProduto} from "./produtoService.js";
+
+
 
 const fileTypes = [
     "image/apng",
@@ -11,10 +14,14 @@ const fileTypes = [
     "image/tiff",
     "image/webp",
     "image/x-icon"
-  ];
+];
   
   function validFileType(file) {
     return fileTypes.includes(file.type);
+  }
+
+  function saveImage(image){
+
   }
 
 function login(){
@@ -25,7 +32,7 @@ function enviaMensagem(){
 
     var campoNome = document.getElementById('inputNome');
     var campoMensagem =document.getElementById('inputMensagem');
-var valido = true;
+    var valido = true;
     campoNome.setCustomValidity('');
         if(campoNome.value.length == 0){
             campoNome.setCustomValidity('O campo nome não deve estar vazio');
@@ -66,7 +73,7 @@ function updateinputimage(){
     if(curFiles.length === 0){
         const para = document.createElement('img');
         para.class="imagemPreview";
-        para.src = ".././img/dragAndDrop.png";
+        para.src = "/img/dragAndDrop.png";
         para.width = "100"; 
         para.height = "100"; 
         preview.appendChild(para);
@@ -82,6 +89,9 @@ function updateinputimage(){
             console.log(image.src);
             image.width = "100"; 
             image.height = "100"; 
+
+            
+            
             preview.appendChild(image);
             reader.readAsDataURL(file);
         }
@@ -89,7 +99,7 @@ function updateinputimage(){
     }
 
 }
-
+/*
 function adicionaProduto(){
     var campoImagem = document.getElementById("botaoDragAndDrop");
     var campoNome = document.getElementById('nomeProduto');
@@ -126,14 +136,20 @@ function adicionaProduto(){
         valido = false;
     }
     if(valido){
-        console.log('produto adicionado');
+        var imageObj = new Image(10,10);
+        imageObj.src=novaimagem2;
+        imageObj.save("../.././img",{});
+        console.log(imageObj.src);
         produtoService.adicionarProduto(
             campoNome.value,campoPreco.value,campoDescricao.value,
-            campoImagem.value,'');
+            campoImagem.value,'').then(response => {
+                    window.location.href = "../.././telas/secaoTodosProdutos.html";
+            }
+            );
     }else{
         console.log('produto não adicionado');
     }
-}
+}*/
 
 function buscarProdutos(){
     console.log("trocou");
@@ -175,19 +191,18 @@ input.addEventListener('change',updateinputimage);
 const botaoAdicionar = document.querySelector('[data-form]');
 
 botaoAdicionar.addEventListener('submit',(evento) => {
-
     evento.preventDefault();
 
     const campoImagem = evento.target.querySelector('[data-imagem]');
+    alert(campoImagem.value);
     const campoNome = evento.target.querySelector('[data-nome]');
     const campoPreco = evento.target.querySelector('[data-preco]');
     const campoDescricao = evento.target.querySelector('[data-descricao]');
 
-    const imagem = campoImagem.value;
-    const nome = campoNome.value;
-    const preco = campoPreco.value;
-    const descricao = campoDescricao.value;
-
+    var imagem = campoImagem.value;
+    var nome = campoNome.value;
+    var preco = parseFloat(campoPreco.value).toFixed(2);
+    var descricao = campoDescricao.value;
     var valido = true;
     campoImagem.setCustomValidity('');
     if(imagem.length == 0){
@@ -206,7 +221,9 @@ botaoAdicionar.addEventListener('submit',(evento) => {
     if(preco.length == 0){
         campoPreco.setCustomValidity('O campo preco não pode estar vazio');
         valido = false;
-    }campoDescricao.setCustomValidity('');
+    }
+        
+    campoDescricao.setCustomValidity('');
     if(descricao.length == 0){
         campoDescricao.setCustomValidity('O campo descricao não pode estar vazio');
         valido = false;
@@ -216,13 +233,36 @@ botaoAdicionar.addEventListener('submit',(evento) => {
     }
     if(valido){
         console.log('produto adicionado');
-        produtoService.adicionarProduto(
-            nome,preco,descricao,
-            imagem,'').then(() => {
-                window.location.href = '../.././telas/secaoTodosProdutos.html';
-            });
+        var novaimagem = imagem.substring(imagem.lastIndexOf('\\'));
+        novaimagem = novaimagem.substr(1);
+        var novaimagem2 = "/img/" + novaimagem;
+        
+        const file = document.querySelector('[data-imagem]').files[0];
+        if(file){
+               
+
+        fetch(
+            `http://localhost:3000/profile`,{
+         method:'POST',
+            headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify(
+            {
+                nome: nome,
+                preco: preco,
+                descricao: descricao,
+                imagem: novaimagem2, 
+                categoria: "Star Wars",
+            }
+        )
+    }).then(
+        () => {
+            window.location.href = '../.././telas/secaoTodosProdutos.html';
+        }
+    );
     }else{
         alert('produto não adicionado');
     }
-});
+}});
 

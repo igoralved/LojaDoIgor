@@ -26,13 +26,14 @@ export const obtemProduto = (id) => {
         },
     }).then(
         resposta => {
+            console.log(resposta);
             return resposta.json();
         }
     )
 }
 
 export const adicionarProduto = (nome,preco,descricao,imagem,categoria) => {
-    return fetch('http://localhost:3000/profile',
+    return fetch(`http://localhost:3000/profile`,
     {
         method:'POST',
         headers:{
@@ -48,16 +49,16 @@ export const adicionarProduto = (nome,preco,descricao,imagem,categoria) => {
             }
         )
     }).then(
-        resposta => {
-            return resposta.body;
-        }
+        resposta =>
+        resposta.json()
     )
 }
+
 
 export const produtoService = {
     listaProdutos,
     obtemProduto,
-    adicionarProduto
+    adicionarProduto,
 }
 
 

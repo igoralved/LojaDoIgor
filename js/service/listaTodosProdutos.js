@@ -47,13 +47,30 @@ var valido = true;
     }
 }
 
+function carregaImagem(imagem){
+
+    const recentImageDataURL = localStorage.getItem(imagem);
+
+    if(recentImageDataURL){
+        imagem = recentImageDataURL;
+    }return imagem;
+}
+
+
 const criaNovoProduto = (nome, preco,descricao,imagem,categoria,id) => {
     const linhaNovoProduto = document.createElement('tr');
 
+    console.log(imagem);
+
+    imagem = carregaImagem(imagem);
+
+    const salva = localStorage.getItem(imagem);
+
+    console.log(salva);
     const conteudo = `
     <td class="produto">
-        <a class="imagemProduto">
-            <img src=${imagem} alt=${descricao} class="imagemProduto">
+        <a download=${imagem} class="imagemProduto">
+            <img crossOrigin="anonymous" src=${imagem} loading="lazy|eager" alt=${descricao} class="imagemProduto" id="imagemProduto">
         </a>
         <a>
             ${nome}
@@ -115,12 +132,9 @@ produtoService.listaProdutos().then(
     {
 
             data.forEach(elemento => {
-                console.log(elemento.imagem);
-                if(true){
                         tabela.appendChild(criaNovoProduto(elemento.nome,elemento.preco,elemento.descricao,elemento.imagem,
                         elemento.categoria,elemento.id));
                     }   
-                }
             )
             }
 )

@@ -6,6 +6,7 @@
         <link rel="stylesheet" href=".././css/secaoNovoProduto.css">
         <link rel="stylesheet" href=".././css/cabecalho.css">
         <link rel="stylesheet" href=".././css/rodape.css">
+        <script src=".././js/service/require.js"></script>
     </head>
     <body>
         <header class="cabecalho">
@@ -28,7 +29,7 @@
                     <h1>Adicionar novo produto</h1>
                     <div class="adicionarImagemProduto">
                     <div class="botaoDragAndDrop">
-                        <label for="botaoDragAndDrop">Procure no computador uma imagem para adicionar uma imagem para o produto</label>
+                        <label id="imageElem" for="botaoDragAndDrop">Procure no computador uma imagem para adicionar uma imagem para o produto</label>
                         <input data-imagem type="file" 
                         placeholder="Procure no computador uma imagem para adicionar uma imagem para o produto"
                         id="botaoDragAndDrop"
@@ -50,7 +51,7 @@
                 </div>
                 <div>
                     <h1 class="nomeCampo">Preço do produto</h1>
-                    <input data-preco type="number" id='precoProduto' required>
+                    <input data-preco min="0" value="0" step=".01" type="number" placeholder="0.00" id='precoProduto' required>
                 </div>
                 <div>
                     <h1 class="nomeCampo">Descrição do produto</h1>
