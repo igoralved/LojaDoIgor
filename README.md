@@ -42,5 +42,4 @@ A empresa AluraGeek está precisando de mais clientes e aumentar suas vendas.
       *Quero ser franqueado;
       *Anuncie aqui;
      O rodapé também tem um formulário para falar com a empresa, que é preciso inserir o nome e a mensagem a ser enviada antes de clicar no botão "enviar mensagem".
-      
-  
+     No final da página diz o nome do desenvolvedor e o ano em que o projeto foi desenvolvido.
