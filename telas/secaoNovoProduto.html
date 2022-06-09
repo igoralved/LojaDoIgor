@@ -23,21 +23,18 @@
                 <button type="submit" class="botaoLogin" id='botaoLogin'>Login</button>
             </div>
         </header>
-        <main>
+        <main class="novo">
             <div class="menuAdicionarNovoProduto">
-                <form data-form>
+                <form data-form class="dataForm">
                     <h1>Adicionar novo produto</h1>
-                    <div class="adicionarImagemProduto">
-                    <div class="botaoDragAndDrop">
-                        <label id="imageElem" for="botaoDragAndDrop">Procure no computador uma imagem para adicionar uma imagem para o produto</label>
+                    <div>
                         <input data-imagem type="file" 
-                        placeholder="Procure no computador uma imagem para adicionar uma imagem para o produto"
-                        id="botaoDragAndDrop"
+                        placeholder="URL da imagem"
+                        class="nomeCampo" id="botaoDragAndDrop"
                         accept=".jpg, .jpeg, .png" multiple required>
-                    </div>
-                    <div class="preview">
-                    <img class="imagemPreview" src=".././img/dragAndDrop.png">
-                    </div>
+                        <!--<div class="preview">
+                            <img class="imagemPreview" src=".././img/dragAndDrop.png">
+                        </div>-->
                 </div>
                     <!--
                     <h1 class="textoOu"> ou </h1>
@@ -46,20 +43,16 @@
                     </div>-->
 
                 <div>
-                    <h1 class="nomeCampo">Nome do produto</h1>
-                    <input data-nome type="text" id='nomeProduto' maxlength="20" required>
+                    <input data-nome type="text" placeholder="Nome do produto" class="nomeCampo" id='nomeProduto' maxlength="20" required>
                 </div>
                 <div>
-                    <h1 class="nomeCampo">Preço do produto</h1>
-                    <input data-preco min="0" value="0" step=".01" type="number" placeholder="0.00" id='precoProduto' required>
+                    <input data-preco min="0" value="0" step=".01" type="number" placeholder="Preço do produto" class="nomeCampo" id='precoProduto' required>
                 </div>
                 <div>
-                    <h1 class="nomeCampo">Descrição do produto</h1>
-                    <input data-descricao type="text" id='descricaoProduto' maxlength="150" required>
+                    <input data-descricao type="text" placeholder="Descrição do produto" class="nomeCampo" id='descricaoProduto' maxlength="150" required>
                 </div>
-                <h1></h1>
                 <div>
-                    <button class="botaoAdicionar" id='botaoAdicionar'>Adicionar produto</button>
+                    <button class="botaoAdicionar" class="nomeCampo" id='botaoAdicionar'>Adicionar produto</button>
                 </div>
             </div></form>
         </main>
@@ -113,9 +106,10 @@
                     </form>
                 </div>
             </div>
-
-            <div class="desenvolvedor">Desenvolvido por Igor Alves</div>
-            <div class="desenvolvedor">2022</div>
+            <div class="desenvolvedor">
+                <div>Desenvolvido por Igor Alves</div>
+                <div>2022</div>
+                </div>
         </footer>
         <script type="module" src=".././js/service/novoProduto.js"></script>
     </body>

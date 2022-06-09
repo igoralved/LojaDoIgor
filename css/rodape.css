@@ -1,6 +1,6 @@
 
 .formularioDeContato{
-    background-color: cyan;
+    background-color: white;
     align-items: center;
     display: flex;
     justify-content:space-around;
@@ -36,5 +36,10 @@
 }
 
 .desenvolvedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    height: 20vh;
+    background-color:aqua;
     font-size: 20
 }

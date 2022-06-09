@@ -22,15 +22,14 @@
                 <button type="submit" class="botaoLogin" id="botaoLogin">Login</button>
             </div>
         </header>
-        <main>
+        <main class="login">
             <div class="menuLogin">
-            <h1 class="iniciarSessaoTitulo">Iniciar sessão</h1>
-            <form action="#">
-                <h2>E-mail</h2>
+            <form action="#" class="formLogin">
+                <h1 class="iniciarSessaoTitulo">Iniciar sessão</h1>
                 <input type="email" placeholder="Escreva seu email" class="emailInput"
                 id="emailInput"
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-                <h2>Senha</h2>
+                <h2></h2>
                 <input type="password" placeholder="Escreva sua senha" class="senhaInput"
                 id="senhaInput"
                 required>
@@ -91,9 +90,10 @@
                     </form>
                 </div>
             </div>
-
-            <div class="desenvolvedor">Desenvolvido por Igor Alves</div>
-            <div class="desenvolvedor">2022</div>
+            <div class="desenvolvedor">
+            <div>Desenvolvido por Igor Alves</div>
+            <div>2022</div>
+            </div>
         </footer>
         <script type="module" src=".././js/service/login.js"></script>
     </body>

@@ -1,10 +1,11 @@
-
+.novo{
+    background-color: #eeeeee;
+    height: 100%;
+}
 
 .menuAdicionarNovoProduto{
+    position: center;
     text-align: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -12,10 +13,17 @@
 
 }
 
+.dataForm{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+}
+/*
 .botaoDragAndDrop{
     width: 20vw;
     height: 20vh;
-}
+}*/
 
 .preview{
     width: 20vw;
@@ -42,11 +50,14 @@
 }
 
 .nomeCampo{
-    font-size: 20px;
+    width: 30vw;
+    height: 5vh;
 }
 
 .botaoAdicionar{
     color:white;
+    width: 30vw;
+    height: 5vh;
     background-color: blue;
     margin-bottom: 10px;
 }

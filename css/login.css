@@ -1,23 +1,39 @@
-
+.login{
+    background-color: #eeeeee;
+}
 
 .menuLogin{
+    position: center;
     text-align: center;
+    justify-content: center;
+}
+
+.formLogin{
+    padding-top: 5vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
 }
 
 .iniciarSessaoTitulo{
-
+    font-size: large;
 }
 
 .emailInput{
-
+    width: 30vw;
+    height: 5vh;
 }
 .senhaInput{
-
+    width: 30vw;
+    height: 5vh;
 }
 
 .loginButton{
     background-color: blue;
     color: white;
+    width: 30vw;
+    height: 5vh;
 }
 
 .loginButton:hover{
