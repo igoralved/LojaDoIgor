@@ -24,10 +24,10 @@
             </div>
         </header>
         <main class="novo">
+            <h1>Adicionar novo produto</h1>
             <div class="menuAdicionarNovoProduto">
                 <form data-form class="dataForm">
-                    <h1>Adicionar novo produto</h1>
-                    <div>
+                    
                         <input data-imagem type="file" 
                         placeholder="URL da imagem"
                         class="nomeCampo" id="botaoDragAndDrop"
@@ -35,26 +35,24 @@
                         <!--<div class="preview">
                             <img class="imagemPreview" src=".././img/dragAndDrop.png">
                         </div>-->
-                </div>
                     <!--
                     <h1 class="textoOu"> ou </h1>
                     <div>
                         <button class="procurarNoComputador" id='procurarNoComputador'>Procure no seu computador</button>
                     </div>-->
-
-                <div>
-                    <input data-nome type="text" placeholder="Nome do produto" class="nomeCampo" id='nomeProduto' maxlength="20" required>
-                </div>
-                <div>
+                    <h2></h2>
+                
+                    <input data-nome type="text" placeholder="Nome do produto" id='nomeProduto' class="nomeCampo" maxlength="20" required>
+                    <h2></h2>
+                
                     <input data-preco min="0" value="0" step=".01" type="number" placeholder="Preço do produto" class="nomeCampo" id='precoProduto' required>
-                </div>
-                <div>
+                
+                    <h2></h2>
                     <input data-descricao type="text" placeholder="Descrição do produto" class="nomeCampo" id='descricaoProduto' maxlength="150" required>
-                </div>
-                <div>
+                    <h2></h2>
                     <button class="botaoAdicionar" class="nomeCampo" id='botaoAdicionar'>Adicionar produto</button>
-                </div>
-            </div></form>
+            
+            </form>
         </main>
         <footer class="rodape">
             <div class="formularioDeContato">
