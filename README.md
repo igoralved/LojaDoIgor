@@ -1,6 +1,8 @@
 # LojaDoIgor
 
 1.Introdução:
+A empresa AluraGeek está precisando de mais clientes e aumentar suas vendas.
+ Este projeto roda no front-end. É um e-commerce cujo objetivo é deixar a empresa no patamar mais digital.
 
 2.Telas:
  
