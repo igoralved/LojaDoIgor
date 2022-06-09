@@ -36,24 +36,32 @@
     text-align: left;
 }
 
+
 .fotoProduto{
+    width:30vw;
+    height: 60vh;
+}
+
+.fotoProdutoSimilar{
     width:10vw;
     height: 20vh;
 }
 
 .nome{
-    font-size: 20px;
+    font-size: 40px;
     color:black;
 }
 
 .preco{
-    font-size: 10px;
+    font-size: 40px;
     color:black;
 }
 
 .descricaoProdutoLinha{
-    font-size: 10px;
+    font-size: 40px;
     color:black;
+    width: 10vw;
+    height:20vw;
 }
 
 .categoriaProdutos{

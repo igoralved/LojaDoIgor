@@ -100,7 +100,7 @@ const criaSimilares = (nome, preco,descricao,imagem,categoria,id) => {
     <td><ul class='similares'>
     <div class="descricaoProdutoSimilar" id=${id}>
     
-        <img class="fotoProduto" src=${imagem} alt=${nome}>
+        <img class="fotoProdutoSimilar" src=${imagem} alt=${nome}>
     
     <a>
             ${nome}
