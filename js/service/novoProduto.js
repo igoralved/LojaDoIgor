@@ -99,57 +99,7 @@ function updateinputimage(){
     }
 
 }
-/*
-function adicionaProduto(){
-    var campoImagem = document.getElementById("botaoDragAndDrop");
-    var campoNome = document.getElementById('nomeProduto');
-    var campoPreco = document.getElementById('precoProduto');
-    var campoDescricao = document.getElementById('descricaoProduto');
 
-    var valido = true;
-    campoImagem.setCustomValidity('');
-    if(campoImagem.value.length == 0){
-        campoImagem.setCustomValidity('O produto precisa de uma imagem');
-        valido = false;
-    }else if(!file_exists(campoImagem.value)){
-        campoImagem.setCustomValidity('Imagem inexsitente');
-        valido = false;
-    }
-    campoNome.setCustomValidity('');
-    if(campoNome.value.length == 0){
-        campoNome.setCustomValidity('O campo nome não pode estar vazio');
-        valido = false;
-    }else if(campoNome.value.length > 20){
-        campoNome.setCustomValidity('O campo nome não pode ter mais de 20 caracteres');
-        valido = false;
-    }
-    campoPreco.setCustomValidity('');
-    if(campoPreco.value.length == 0){
-        campoPreco.setCustomValidity('O campo preco não pode estar vazio');
-        valido = false;
-    }campoDescricao.setCustomValidity('');
-    if(campoDescricao.value.length == 0){
-        campoDescricao.setCustomValidity('O campo descricao não pode estar vazio');
-        valido = false;
-    }else if(campoDescricao.value.length > 150){
-        campoDescricao.setCustomValidity('O campo descricao não pode ter mais de 150 caracteres');
-        valido = false;
-    }
-    if(valido){
-        var imageObj = new Image(10,10);
-        imageObj.src=novaimagem2;
-        imageObj.save("../.././img",{});
-        console.log(imageObj.src);
-        produtoService.adicionarProduto(
-            campoNome.value,campoPreco.value,campoDescricao.value,
-            campoImagem.value,'').then(response => {
-                    window.location.href = "../.././telas/secaoTodosProdutos.html";
-            }
-            );
-    }else{
-        console.log('produto não adicionado');
-    }
-}*/
 
 function buscarProdutos(){
     console.log("trocou");

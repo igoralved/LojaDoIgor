@@ -4,7 +4,16 @@
   "description": "É uma loja do igor",
   "main": "listaTodosProdutos.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --detectOpenHandles"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    },
+    "automock": false,
+    "setupFiles": [
+      "./js/service/setupJest.js"
+    ]
   },
   "repository": {
     "type": "git",
@@ -13,9 +22,14 @@
   "author": "igor",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.27.2",
     "cors": "^2.8.5",
+    "fetch-mock": "^9.11.0",
     "image-js": "^0.34.1",
+    "isomorphic-fetch": "^3.0.0",
+    "jest": "^28.1.1",
     "json-server": "^0.16.3",
+    "mongoose": "^6.3.6",
     "require": "^2.4.20",
     "requirejs": "^2.3.6"
   },
@@ -23,5 +37,10 @@
     "url": "https://github.com/igoralved/LojaDoIgor/issues"
   },
   "homepage": "https://github.com/igoralved/LojaDoIgor#readme",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@babel/preset-env": "^7.18.2",
+    "babel-jest": "^28.1.1",
+    "jest-fetch-mock": "^3.0.3"
+  }
 }

@@ -1,6 +1,12 @@
 
+import axios from 'axios';
 
 
+export const sum = (a,b) => {
+    return a + b
+}
+
+testForSum: sum
 
 export const listaProdutos = () => {
     return fetch('http://localhost:3000/profile',
