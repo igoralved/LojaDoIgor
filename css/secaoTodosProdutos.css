@@ -1,3 +1,8 @@
+.body{
+    margin:0;
+    padding: 0;
+}
+
 
 .lista{
     background-color: #eeeeee;
@@ -6,6 +11,7 @@
 
 .conteudoLista{
     padding-top: 5vh;
+    padding-left: 10vw;
 }
 
 .listaTodosProdutos{
@@ -50,10 +56,11 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-gap:100px;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px;
     justify-content: center;
+    align-items: center;
 }
 
 .produto{

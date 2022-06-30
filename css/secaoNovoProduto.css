@@ -1,3 +1,9 @@
+.body{
+    margin:0;
+    padding: 0;
+}
+
+
 .novo{
     background-color: #eeeeee;
     justify-content: space-between;
@@ -8,7 +14,7 @@
 
 .menuAdicionarNovoProduto{
     position: center;
-    text-align: center;
+    text-align: left;
     justify-content: space-between;
 }
 

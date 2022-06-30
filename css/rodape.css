@@ -15,7 +15,7 @@
 }
 
 .formularioFaleConosco{
-
+    
 }
 
 .botaoFalarConosco{
@@ -33,6 +33,9 @@
 
 .iconeNavList{
     font-style:normal;
+    font-size:20px;
+    text-align: center;
+    justify-content: center;
 }
 
 .desenvolvedor{
@@ -42,3 +45,4 @@
     height: 20vh;
     font-size: 20
 }
+
