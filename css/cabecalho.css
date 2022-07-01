@@ -6,10 +6,12 @@
     justify-content:space-around;
     align-items:center;
     background-color: white;
+    margin:0;
+    padding:0;
 }
 
 .menuPrincipal{
-    margin-top: 10px;
+    
 }
 
 
