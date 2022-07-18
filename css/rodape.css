@@ -1,4 +1,8 @@
 
+.tituloSite{
+    padding-bottom:100px;
+}
+
 .formularioDeContato{
     background-color: cyan;
     align-items: center;
@@ -19,7 +23,8 @@
 }
 
 .botaoFalarConosco{
-
+    background-color: blue;
+    color:white
 }
 
 .botaoFalarConosco:hover{

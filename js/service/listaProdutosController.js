@@ -44,9 +44,9 @@ const criaNovaLinha = (nome, preco,descricao,imagem,categoria,id) => {
         <a>
             ${nome}
         </a>
-        <a>
+        <strong>
             R$${preco}
-        </a>
+        </strong>
         <button type="submit" id="verProduto">Ver produto</button>
     </li>
 </ul>
