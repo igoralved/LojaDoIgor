@@ -7,7 +7,7 @@
     background-color: cyan;
     align-items: center;
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
 }
 
 .navList{
@@ -19,7 +19,8 @@
 }
 
 .formularioFaleConosco{
-    
+    display:flex;
+    flex-direction: column;
 }
 
 .botaoFalarConosco{
